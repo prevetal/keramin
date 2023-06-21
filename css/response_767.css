@@ -1,0 +1,1181 @@
+@media print,
+(max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size: 14px;
+        --font_size_title: 32px;
+    }
+
+
+
+    .block,
+    .block.small_m
+    {
+        margin-bottom: 60px;
+    }
+
+
+
+    /*----------------
+        Pagination
+    ----------------*/
+    .pagination *.mob_hide
+    {
+        display: none;
+    }
+
+    .pagination * + *
+    {
+        margin-left: 4px;
+    }
+
+
+    .pagination a,
+    .pagination .sep
+    {
+        line-height: 36px;
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+
+    /*----------
+        Tabs
+    ----------*/
+    .tabs .btn
+    {
+        font-size: 12px;
+    }
+
+
+
+    /*--------------
+        All link
+    --------------*/
+    .all_link
+    {
+        font-size: 12px;
+
+        margin-top: 32px;
+    }
+
+
+    .all_link a .icon,
+    .all_link .btn .icon
+    {
+        width: 20px;
+        height: 13px;
+        margin-left: 12px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head .title
+    {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header .logo img
+    {
+        width: 180px;
+    }
+
+
+
+    .mob_header .icon_links > * + *
+    {
+        margin-left: 4px;
+    }
+
+
+    .mob_header .icon_links a,
+    .mob_header .icon_links .btn
+    {
+        padding: 0 12px;
+    }
+
+
+
+    .mob_header .mob_menu_btn
+    {
+        margin-left: 24px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        margin-bottom: 40px;
+        padding-top: 20px;
+    }
+
+
+    .breadcrumbs
+    {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+
+    .page_title
+    {
+        margin-top: 20px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head,
+    .block_head.small
+    {
+        margin-bottom: 28px;
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .columns > *.width1of5,
+    .form .columns > *.width1of3,
+    .form .columns > *.width1of6
+    {
+        width: calc(50% - var(--form_columns_offset));
+    }
+
+
+    .form .label
+    {
+        font-size: 12px;
+        line-height: 100%;
+    }
+
+
+
+    /*----------------
+        Typography
+    ----------------*/
+    .text_block
+    {
+        line-height: 24px;
+    }
+
+
+    .text_block h2
+    {
+        font-size: 24px;
+    }
+
+    .text_block h3
+    {
+        font-size: 22px;
+    }
+
+    .text_block h4
+    {
+        font-size: 20px;
+    }
+
+    .text_block h5
+    {
+        font-size: 18px;
+    }
+
+
+    .text_block .image_block,
+    .text_block .image_full_w
+    {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+
+    .text_block .big
+    {
+        font-size: 16px;
+    }
+
+
+    .text_block .image_block > div,
+    .text_block .image_block img
+    {
+        width: 100%;
+    }
+
+    .text_block .image_block > div
+    {
+        margin-top: 24px;
+
+        order: 2;
+    }
+
+
+    .text_block .cols .col
+    {
+        width: 100%;
+    }
+
+    .text_block .cols .col + .col
+    {
+        margin-top: 40px;
+    }
+
+
+    .text_block .slider .thumbs
+    {
+        width: 320px;
+    }
+
+
+    .text_block img.right
+    {
+        float: none;
+
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .text_block img.left
+    {
+        float: none;
+
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+
+    .text_block blockquote,
+    .text_block q
+    {
+        font-size: 16px;
+        line-height: 26px;
+
+        padding: 32px 0 32px 24px;
+    }
+
+    .text_block blockquote:before,
+    .text_block q:before
+    {
+        height: calc(100% - 64px);
+    }
+
+
+
+    /*-----------------
+        Main slider
+    -----------------*/
+    .main_slider .swiper-slide
+    {
+        min-height: 400px;
+    }
+
+
+    .main_slider .data
+    {
+        width: 100%;
+        padding: 32px 24px 40px;
+    }
+
+
+
+    /*-----------------
+        Collections
+    -----------------*/
+    .collections .grid > *
+    {
+        width: calc(50% - 24px);
+    }
+
+    .collections .grid > *.big_w
+    {
+        width: calc(100% - 24px);
+
+        order: 2;
+    }
+
+
+    .collections .grid .collection .name
+    {
+        font-size: 20px;
+        line-height: 48px;
+    }
+
+
+    .collections .grid .collection .desc
+    {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+
+
+    .collections .row
+    {
+        margin-left: 0;
+    }
+
+    .collections .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products .tags
+    {
+        margin-bottom: 16px;
+        margin-left: -8px;
+    }
+
+    .products .tags > *
+    {
+        margin-bottom: 8px;
+        margin-left: 8px;
+    }
+
+
+    .products .tags a
+    {
+        padding: 5px 11px;
+    }
+
+
+
+    .products .head .label
+    {
+        width: 100%;
+        margin: 0;
+    }
+
+
+
+    .products .row,
+    .content .products .row
+    {
+        margin-left: -24px;
+
+        --count: 2;
+    }
+
+    .products .row > *,
+    .content .products .row > *
+    {
+        width: calc(50% - 24px);
+        margin-left: 24px;
+    }
+
+
+    .products .swiper-button-prev,
+    .products .swiper-button-next
+    {
+        margin-bottom: 32px;
+    }
+
+    .products .swiper-button-prev
+    {
+        right: 34px;
+    }
+
+
+    .products .product .thumb
+    {
+        height: 200px;
+        margin-bottom: 16px;
+        padding: 11px;
+    }
+
+
+    .products .product .name
+    {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
+    .products .product .features
+    {
+        margin-left: 0;
+    }
+
+    .products .product .features > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .products .product .price,
+    .products .row .product .price
+    {
+        width: 100%;
+    }
+
+
+    .products .product .amount,
+    .products .row .product .amount
+    {
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+
+    .products .product .buy_btn,
+    .products .row .product .buy_btn
+    {
+        width: 56px;
+        margin-top: 12px;
+        margin-left: auto;
+    }
+
+
+
+    /*--------------
+        Projects
+    --------------*/
+    .projects .swiper-button-prev,
+    .projects .swiper-button-next
+    {
+        margin-bottom: 32px;
+    }
+
+    .projects .swiper-button-prev
+    {
+        right: 34px;
+    }
+
+
+    .projects .tags
+    {
+        margin-bottom: 16px;
+        margin-left: -8px;
+    }
+
+    .projects .tags > *
+    {
+        margin-bottom: 8px;
+        margin-left: 8px;
+    }
+
+
+    .projects .tags a
+    {
+        padding: 5px 11px;
+    }
+
+
+    .projects .row
+    {
+        margin-left: 0;
+    }
+
+    .projects .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .projects .project .name
+    {
+        font-size: 19px;
+        line-height: 25px;
+    }
+
+
+
+    /*-----------------
+        Bottom btns
+    -----------------*/
+    .bottom_btns .btn
+    {
+        font-size: 15px;
+
+        width: 100%;
+        height: 68px;
+    }
+
+
+
+    /*-------------------
+        Contacts info
+    -------------------*/
+    .contacts_info .section .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .contacts_info .location,
+    .contacts_info .phone,
+    .contacts_info .email
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+
+    /*----------------------
+        Partners network
+    ----------------------*/
+    .partners_network .head .title
+    {
+        font-size: 24px;
+        line-height: 32px;
+
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+
+    .partners_network .head .city
+    {
+        margin-left: 0;
+    }
+
+
+    .partners_network .head .join_btn
+    {
+        font-size: 12px;
+    }
+
+
+
+    .partners_network .items
+    {
+        margin-left: 0;
+    }
+
+    .partners_network .items > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info .stickers
+    {
+        left: -1px;
+    }
+
+
+    .product_info .images
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 0 14px;
+    }
+
+
+    .product_info .images .image
+    {
+        height: 360px;
+        padding-bottom: 50px;
+    }
+
+
+    .product_info .images .swiper-horizontal > .swiper-pagination-bullets,
+    .product_info .images .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .product_info .images .swiper-pagination-custom,
+    .product_info .images .swiper-pagination-fraction
+    {
+        bottom: 24px;
+    }
+
+
+    .product_info .images .thumbs
+    {
+        display: none;
+    }
+
+
+    .product_info .images .thumbs .swiper
+    {
+        position: relative;
+
+        height: auto;
+        padding: 0 46px;
+    }
+
+
+    .product_info .data
+    {
+        width: 100%;
+        padding-bottom: 24px;
+    }
+
+
+    .product_info .features
+    {
+        width: 100%;
+        margin-top: 24px;
+
+        order: 2;
+    }
+
+
+    .product_info .features .label
+    {
+        width: calc(100% - 164px);
+    }
+
+    .product_info .features .val
+    {
+        width: 164px;
+    }
+
+
+    .product_info .buy
+    {
+        width: 100%;
+        padding: 24px;
+    }
+
+
+    .product_info .info
+    {
+        width: 100%;
+    }
+
+
+    .product_info .info .price .val
+    {
+        font-size: 26px;
+    }
+
+
+
+    /*------------------
+        Product data
+    ------------------*/
+    .product_data .features .row
+    {
+        margin-bottom: -12px;
+        margin-left: 0;
+    }
+
+    .product_data .features .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .product_data .features .label
+    {
+        width: calc(100% - 164px);
+    }
+
+    .product_data .features .val
+    {
+        width: 164px;
+    }
+
+
+
+    /*-------------
+        History
+    -------------*/
+    .history .swiper:before
+    {
+        top: 102px;
+    }
+
+
+    .history .year
+    {
+        font-size: 64px;
+    }
+
+
+
+    /*-----------------
+        About stats
+    -----------------*/
+    .about_stats .item .val
+    {
+        font-size: 64px;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+
+    .contacts_block .requisites .company
+    {
+        line-height: 22px;
+    }
+
+
+    .contacts_block .shops .list > * + *
+    {
+        margin-top: 24px;
+        padding-top: 24px;
+    }
+
+
+    .contacts_block .shops .location,
+    .contacts_block .shops .phone,
+    .contacts_block .shops .email
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+
+
+    /*------------
+        Awards
+    ------------*/
+    .awards .thumb
+    {
+        height: 200px;
+    }
+
+
+    .awards .item .name
+    {
+        line-height: 21px;
+
+        margin-top: 16px;
+    }
+
+
+
+    /*-----------
+        Files
+    -----------*/
+    .files .links
+    {
+        margin-bottom: 16px;
+        margin-left: -8px;
+    }
+
+    .files .links > *
+    {
+        margin-bottom: 8px;
+        margin-left: 8px;
+    }
+
+
+    .files .links a
+    {
+        padding: 5px 11px;
+    }
+
+
+    .files .file .thumb
+    {
+        margin-bottom: 16px;
+    }
+
+
+    .files .file .info
+    {
+        line-height: 20px;
+
+        margin-top: 4px;
+    }
+
+
+    .files .file .btns
+    {
+        margin-left: 0;
+    }
+
+    .files .file .btns > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .files .file .btns .btn
+    {
+        font-size: 12px;
+    }
+
+
+
+    /*--------------
+        Articles
+    --------------*/
+    .articles .article .name
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    .articles .article .desc
+    {
+        margin-top: 20px;
+    }
+
+
+    .articles .article .thumb
+    {
+        padding-bottom: 65%;
+    }
+
+
+
+    /*-----------
+        Logos
+    -----------*/
+    .logos .block_title
+    {
+        font-size: 24px;
+    }
+
+
+    .logos .swiper-button-prev,
+    .logos .swiper-button-next
+    {
+        margin-bottom: 32px;
+    }
+
+    .logos .swiper-button-prev
+    {
+        right: 34px;
+    }
+
+
+    .logos .item
+    {
+        height: 120px;
+    }
+
+
+
+    /*-----------------
+        Order block
+    -----------------*/
+    .order_block .block_head
+    {
+        padding-bottom: 11px;
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .product
+    {
+        padding: 14px;
+
+        text-align: center;
+    }
+
+
+    .cart_info .product .thumb
+    {
+        position: relative;
+
+        width: 100%;
+    }
+
+
+    .cart_info .product .name
+    {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .cart_info .product .price,
+    .cart_info .product .amount,
+    .cart_info .product .price.total
+    {
+        width: calc(50% - 12px);
+
+        text-align: center;
+    }
+
+    .cart_info .product .amount
+    {
+        margin-left: auto;
+    }
+
+
+    .cart_info .product .price.total
+    {
+        margin-left: auto;
+    }
+
+
+    .cart_info .clear_btn
+    {
+        font-size: 12px;
+
+        margin-top: 20px;
+    }
+
+
+
+    /*----------------
+        Cart total
+    ----------------*/
+    .cart_total .agree .field
+    {
+        width: 236px;
+    }
+
+
+
+    /*-------------------
+        Checkout info
+    -------------------*/
+    .checkout_info .section .title
+    {
+        font-size: 20px;
+        line-height: 28px;
+
+        margin-bottom: 24px;
+        padding-bottom: 7px;
+    }
+
+
+    .checkout_info .form .columns > *.width1of6
+    {
+        width: calc(50% - var(--form_columns_offset));
+    }
+
+    .checkout_info .form .columns > *.width2of3
+    {
+        width: calc(100% - var(--form_columns_offset));
+    }
+
+
+    .checkout_info .entity_check .checkbox
+    {
+        font-size: 14px;
+    }
+
+
+    .checkout_info .entity_check .login_btn
+    {
+        font-size: 14px;
+
+        margin-left: auto;
+    }
+
+
+    .checkout_info .delivery_methods label .check + div
+    {
+        flex-wrap: wrap;
+    }
+
+
+    .checkout_info .delivery_methods label .exp
+    {
+        width: 100%;
+        margin-top: 8px;
+        margin-left: 0;
+    }
+
+
+
+    /*-------------
+        LK info
+    ------------*/
+    .lk_info .section .title
+    {
+        font-size: 20px;
+        line-height: 28px;
+
+        margin-bottom: 24px;
+        padding-bottom: 7px;
+    }
+
+
+    .lk_info .personal_info .gender > * + *
+    {
+        margin-left: 25px;
+    }
+
+
+    .lk_info .password .form .btns
+    {
+        margin-top: 20px;
+    }
+
+
+    .lk_info .btns
+    {
+        margin-top: 0;
+    }
+
+
+
+    /*------------
+        Orders
+    ------------*/
+    .orders .titles
+    {
+        display: none;
+    }
+
+
+    .orders .order .head
+    {
+        padding-right: 0;
+
+        flex-wrap: wrap;
+    }
+
+
+    .orders .col_number,
+    .orders .col_date,
+    .orders .col_status,
+    .orders .col_price
+    {
+        width: 50%;
+        min-width: 0;
+    }
+
+
+    .orders .cart_info .product
+    {
+        padding: 14px;
+    }
+
+
+    .orders .cart_info .product .thumb
+    {
+        position: relative;
+
+        width: 100%;
+    }
+
+
+    .orders .cart_info .product .amount
+    {
+        width: auto;
+        min-width: 64px;
+    }
+
+
+    .orders .cart_info .product .price.total
+    {
+        width: auto;
+        margin-left: 0;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .title
+    {
+        font-size: 17px;
+        line-height: 21px;
+    }
+
+
+
+    footer .links
+    {
+        width: calc(50% - 12px);
+        margin-bottom: 40px;
+    }
+
+
+
+    footer .contacts
+    {
+        margin-top: 0;
+    }
+
+
+
+    footer .copyright
+    {
+        width: 100%;
+    }
+
+    footer .copyright span + span
+    {
+        display: block;
+
+        width: 100%;
+        margin-top: 4px;
+        margin-left: 0;
+    }
+
+
+
+    footer .privacy_policy_link
+    {
+        margin-top: 16px;
+        margin-left: 0;
+    }
+
+
+    footer .creator
+    {
+        width: auto;
+        margin-top: 16px;
+        margin-left: auto;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        width: 420px;
+        padding: 40px;
+    }
+
+
+    .modal_title
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}

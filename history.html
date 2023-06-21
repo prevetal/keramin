@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<!-- Адаптирование страницы для мобильных устройств -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Запрет распознования номера телефона -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Заголовок страницы -->
+		<title>Заголовок страницы</title>
+
+		<!-- Данное значение часто используют(использовали) поисковые системы -->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<!-- Традиционная иконка сайта, размер 16x16, прозрачность поддерживается. Рекомендуемый формат: .ico или .png -->
+		<link rel="shortcut icon" href="favicon.png">
+
+		<!-- Изменение цвета панели моб. браузера -->
+		<meta name="msapplication-TileColor" content="#f4004d">
+		<meta name="theme-color" content="#f4004d">
+
+		<!-- Подключение файлов стилей -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
+		<link rel="stylesheet" href="css/swiper.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
+		<link rel="stylesheet" href="css/ion.rangeSlider.css" async>
+		<link rel="stylesheet" href="css/styles.css" async>
+
+		<link rel="stylesheet" href="css/response_1899.css" media="print, (max-width: 1899px)" async>
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
+		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
+		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
+		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<header>
+					<button class="mob_close_btn"></button>
+
+					<div class="scroll">
+						<div class="top">
+							<div class="cont row">
+								<div class="links">
+									<div><a href="/" class="active">О компании</a></div>
+									<div><a href="/">Партнерам</a></div>
+									<div><a href="/">Где купить</a></div>
+									<div><a href="/">Контакты</a></div>
+								</div>
+
+								<div class="contacts">
+									<div class="phone">
+										<a href="tel:+74958492800">+ 7 495 849 28 00</a>
+									</div>
+
+									<button class="callback_btn modal_btn" data-modal="callback_modal">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
+										<span>ОБРАТНЫЙ ЗВОНОК</span>
+									</button>
+
+									<div class="messages">
+										<a href="/" target="_blank" rel="noopener nofollow" class="whatsapp_link">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_whatsapp"></use></svg>
+										</a>
+
+										<a href="/" target="_blank" rel="noopener nofollow" class="telegram_link">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_telegram"></use></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="data">
+							<div class="cont row">
+								<a href="/" class="logo">
+									<img src="images/logo.svg" alt="">
+								</a>
+
+								<div class="links">
+									<div><a href="/" class="products_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_products"></use></svg>
+										<span>Продукты</span>
+									</a></div>
+
+									<div><a href="/" class="shop_link">
+										<svg class="icon"><use xlink:href="images/sprite.svg#ic_shop"></use></svg>
+										<span>Интернет-магазин</span>
+									</a></div>
+								</div>
+
+								<div class="search">
+									<form action="">
+										<input type="text" name="" value="" class="input" placeholder="Поиск">
+
+										<button type="submit" class="submit_btn">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+										</button>
+									</form>
+								</div>
+
+								<div class="icon_links">
+									<div class="account">
+										<button class="btn modal_btn" data-modal="login_modal">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+										</button>
+									</div>
+
+									<div class="favorites">
+										<a href="/">
+											<span class="count">16</span>
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
+										</a>
+									</div>
+
+									<div class="cart">
+										<a href="/">
+											<span class="count">2</span>
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="bottom">
+							<div class="cont">
+								<nav class="categories row">
+									<div>
+										<a href="/" class="sub_link">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_catalog"></use></svg>
+											<span>КАТАЛОГ</span>
+										</a>
+
+										<div class="sub">
+											<div class="cont">
+												<div class="row">
+													<div class="col">
+														<div class="title">Керамическая плитка</div>
+
+														<div class="items">
+															<div><a href="/">Для ванной</a></div>
+															<div><a href="/">Для кухни</a></div>
+															<div><a href="/">Для стен</a></div>
+															<div><a href="/">Для пола</a></div>
+															<div><a href="/">Декор для пола</a></div>
+															<div><a href="/">Декор для стен</a></div>
+															<div><a href="/">Мозаика</a></div>
+														</div>
+													</div>
+
+													<div class="col">
+														<div class="title">Керамогранит</div>
+
+														<div class="items">
+															<div><a href="/">Для ванной</a></div>
+															<div><a href="/">Для пола</a></div>
+															<div><a href="/">Для кухни</a></div>
+															<div><a href="/">Для стен</a></div>
+															<div><a href="/">Мозаика</a></div>
+															<div><a href="/">Плинтус</a></div>
+															<div><a href="/">Ступени</a></div>
+															<div><a href="/">Декор для пола</a></div>
+														</div>
+													</div>
+
+													<div class="col">
+														<div class="title">Сантехника</div>
+
+														<div class="items columns">
+															<div>
+																<div><a href="/">Сантехника</a></div>
+																<div><a href="/">Унитазы</a></div>
+																<div><a href="/">Пьедесталы</a></div>
+																<div><a href="/">Умывальники</a></div>
+																<div><a href="/">Ванны</a></div>
+																<div><a href="/">Экраны для ванн</a></div>
+																<div><a href="/">Шторки для ванн</a></div>
+																<div><a href="/">Душевые кабины</a></div>
+															</div>
+
+															<div>
+																<div><a href="/">Биде</a></div>
+																<div><a href="/">Писсуары</a></div>
+																<div><a href="/">Смесители</a></div>
+																<div><a href="/">Полотенцесушители</a></div>
+															</div>
+														</div>
+													</div>
+
+													<div class="col">
+														<div class="title">Аксессуары</div>
+
+														<div class="items columns">
+															<div>
+																<div><a href="/">Сопутствующие товары</a></div>
+																<div><a href="/">Аксессуары для ванной</a></div>
+																<div><a href="/">Водоотводящие желоба</a></div>
+																<div><a href="/">Герметики</a></div>
+																<div><a href="/">Гидроизоляция</a></div>
+																<div><a href="/">Грунтовки</a></div>
+																<div><a href="/">Зеркала</a></div>
+																<div><a href="/">Клей для плитки</a></div>
+															</div>
+
+															<div>
+																<div><a href="/">Светильники</a></div>
+																<div><a href="/" class="more_link">Показать еще</a></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div><a href="/">
+										<span>КЕРАМИЧЕСКАЯ ПЛИТКА</span>
+									</a></div>
+
+									<div><a href="/">
+										<span>КЕРАМОГРАНИТ</span>
+									</a></div>
+
+									<div><a href="/">
+										<span>САНТЕХНИКА</span>
+									</a></div>
+
+									<div><a href="/">
+										<span>СОПУТСТВУЮЩИЕ ТОВАРЫ</span>
+									</a></div>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</header>
+
+
+				<section class="mob_header">
+					<div class="cont row">
+						<a href="/" class="logo">
+							<img src="images/logo.svg" alt="">
+						</a>
+
+						<div class="icon_links">
+							<div class="account">
+								<button class="btn modal_btn" data-modal="login_modal">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+								</button>
+							</div>
+
+							<div class="favorites">
+								<a href="/">
+									<span class="count">16</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_favorite"></use></svg>
+								</a>
+							</div>
+
+							<div class="cart">
+								<a href="/">
+									<span class="count">2</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
+								</a>
+							</div>
+						</div>
+
+						<button class="mob_menu_btn">
+							<span></span>
+						</button>
+					</div>
+				</section>
+
+
+				<section class="page_head">
+					<div class="cont">
+						<div class="breadcrumbs">
+							<a href="/">Главная</a> <span class="sep"></span>
+							<a href="/">О компании</a> <span class="sep"></span>
+							<span class="current">История бренда</span>
+						</div>
+
+						<h1 class="page_title">История бренда</h1>
+					</div>
+				</section>
+
+
+				<section class="block">
+					<div class="cont row">
+						<div class="text_block">
+							<p>ОАО «Керамин» – одно из крупнейших в Восточной Европе, современное, динамично развивающееся предприятие по производству керамической плитки, керамогранита, изделий санитарной керамики и керамического кирпича, история которого уходит корнями в далекий 1950 год, когда Минским кирпичным заводом №10 была выпущена первая партия продукции. Тогда это был строительный кирпич. За 70 лет мы выросли в одно из самых известных, технологичных и больших производств в Беларуси и один из старейших и узнаваемых производителей керамической плитки на территории СНГ.</p>
+
+							<p class="big"><b>Краткая история становления и развития ОАО «Керамин» выглядит так:</b></p>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="history block small_m">
+					<div class="cont">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="year">2019</div>
+
+									<div class="desc">В эксплуатацию введена новая линия по производству керамической плитки, и выпущены новые коллекции в  формате 750х250 мм. Выпущены безободковые унитазы с технологией «Easy Flush. Easy Clean»: благодаря новой технологии теперь просто не только поддерживать чистоту, но экономично расходовать воду; также выпущены сиденья для унитазов из полимерного композиционного материала с антибактериальной защитой с использованием ионов серебра;</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="year">2020</div>
+
+									<div class="desc">Выпуск линейки керамической плитки в новом большом формате<br> 900х300 мм.</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="year">2021</div>
+
+									<div class="desc">Выпуск линейки клинкерного кирпича, по прочности и долговечности не уступающего натуральному камню. Клинкерный кирпич произведен исключительно из натуральной глины, имеет высокую устойчивость к ультрафиолету и поэтому не выгорает на солнце даже спустя десятки лет, практически не впитывает влагу благодаря низкой пористости и обладает повышенной морозостойкостью (150-300 циклов замораживания без разрушений, трещин и сколов)</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="year">2019</div>
+
+									<div class="desc">В эксплуатацию введена новая линия по производству керамической плитки, и выпущены новые коллекции в  формате 750х250 мм. Выпущены безободковые унитазы с технологией «Easy Flush. Easy Clean»: благодаря новой технологии теперь просто не только поддерживать чистоту, но экономично расходовать воду; также выпущены сиденья для унитазов из полимерного композиционного материала с антибактериальной защитой с использованием ионов серебра;</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="year">2020</div>
+
+									<div class="desc">Выпуск линейки керамической плитки в новом большом формате<br> 900х300 мм.</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="year">2021</div>
+
+									<div class="desc">Выпуск линейки клинкерного кирпича, по прочности и долговечности не уступающего натуральному камню. Клинкерный кирпич произведен исключительно из натуральной глины, имеет высокую устойчивость к ультрафиолету и поэтому не выгорает на солнце даже спустя десятки лет, практически не впитывает влагу благодаря низкой пористости и обладает повышенной морозостойкостью (150-300 циклов замораживания без разрушений, трещин и сколов)</div>
+								</div>
+							</div>
+
+							<div class="swiper-button-prev">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</div>
+
+							<div class="swiper-button-next">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+							</div>
+						</div>
+					</div>
+				</section>
+
+
+				<section class="awards block">
+					<div class="cont">
+						<div class="block_head small">
+							<div class="title">Награды</div>
+						</div>
+
+						<div class="row">
+							<a href="images/tmp/award_thumb1.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb1.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Международный Конкурс на лучшую строительную и проектную организацию</div>
+							</a>
+
+							<a href="images/tmp/award_thumb2.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb2.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">«Керамин» — победитель конкурса «Бренд Года 2016» в потребительской номинации</div>
+							</a>
+
+							<a href="images/tmp/award_thumb3.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb3.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Международный Конкурс на лучшую строительную и проектную организацию</div>
+							</a>
+
+							<a href="images/tmp/award_thumb4.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb4.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Лучший строительный продукт, г. Минск, 2016 г.</div>
+							</a>
+
+							<a href="images/tmp/award_thumb1.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb1.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Международный Конкурс на лучшую строительную и проектную организацию</div>
+							</a>
+
+							<a href="images/tmp/award_thumb2.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb2.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">«Керамин» — победитель конкурса «Бренд Года 2016» в потребительской номинации</div>
+							</a>
+
+							<a href="images/tmp/award_thumb3.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb3.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Международный Конкурс на лучшую строительную и проектную организацию</div>
+							</a>
+
+							<a href="images/tmp/award_thumb4.jpg" class="item fancy_img" data-fancybox="awards">
+								<div class="thumb">
+									<img data-src="images/tmp/award_thumb4.jpg" alt="" class="lazyload">
+
+									<svg class="zoom"><use xlink:href="images/sprite.svg#ic_zoom"></use></svg>
+								</div>
+
+								<div class="name">Лучший строительный продукт, г. Минск, 2016 г.</div>
+							</a>
+						</div>
+
+						<div class="all_link">
+							<button class="btn">
+								<span>ПОКАЗАТЬ ЕЩЕ</span>
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arrow_hor"></use></svg>
+							</button>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+			<footer>
+				<div class="cont row">
+					<div class="links">
+						<div class="title">Продукты</div>
+
+						<div class="items">
+							<div><a href="/">Интернет-магазин</a></div>
+							<div><a href="/">Керамическая плитка</a></div>
+							<div><a href="/">Керамогранит</a></div>
+							<div><a href="/">Сантехника</a></div>
+							<div><a href="/">Коллекции</a></div>
+							<div><a href="/">Галлерея вдохновений</a></div>
+						</div>
+					</div>
+
+					<div class="links">
+						<div class="title">Клиентам</div>
+
+						<div class="items">
+							<div><a href="/">Доставка</a></div>
+							<div><a href="/">Оплата</a></div>
+							<div><a href="/">Где купить</a></div>
+						</div>
+					</div>
+
+					<div class="links">
+						<div class="title">Партнерам</div>
+
+						<div class="items">
+							<div><a href="/">Вход в личный кабинет</a></div>
+							<div><a href="/">Наши партнеры</a></div>
+							<div><a href="/">Дизайнерам</a></div>
+							<div><a href="/">Заявка на сотрудничество</a></div>
+							<div><a href="/">Материалы для скачивания</a></div>
+						</div>
+					</div>
+
+					<div class="links">
+						<div class="title">О компании</div>
+
+						<div class="items">
+							<div><a href="/">Производство</a></div>
+							<div><a href="/">Новости</a></div>
+							<div><a href="/">Реквизиты</a></div>
+							<div><a href="/">Вакансии</a></div>
+						</div>
+					</div>
+
+					<div class="contacts">
+						<div class="title">Контакты</div>
+
+						<div class="phone">
+							<div class="icon">
+								<svg><use xlink:href="images/sprite.svg#ic_phone2"></use></svg>
+							</div>
+
+							<div><a href="tel:+74958492800">+7 (495) 849 28 00</a></div>
+						</div>
+
+						<div class="location">
+							<div class="icon">
+								<svg><use xlink:href="images/sprite.svg#ic_location"></use></svg>
+							</div>
+
+							<div>Москва, Щелковское ш., 5, стр. 1 <a href="/">Схема проезда</a></div>
+						</div>
+
+						<div class="email">
+							<div class="icon">
+								<svg><use xlink:href="images/sprite.svg#ic_email"></use></svg>
+							</div>
+
+							<div><a href="mailto:sales@keramin.ru">sales@keramin.ru</a></div>
+						</div>
+
+						<div class="socials">
+							<div class="title">Мы в социальных сетях</div>
+
+							<div class="items">
+								<a href="/" target="_blank" rel="noopener nofollow" class="instagram_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_instagram"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="fb_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_fb"></use></svg>
+								</a>
+
+								<a href="/" target="_blank" rel="noopener nofollow" class="vk_link">
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_vk"></use></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont row">
+					<div class="copyright">
+						<span>&copy; 2014–2021  ООО ТК «КЕРАМИН-ЦЕНТР»</span>
+						<span>Все права защищены</span>
+					</div>
+
+					<div class="privacy_policy_link">
+						<a href="/">Политика конфиденцальности</a>
+					</div>
+
+					<div class="creator">
+						<a href="/" target="_blank" rel="noopener">Создание сайта <span>Точка.ру</span></a>
+					</div>
+				</div>
+
+				<img data-src="images/bg_footer.jpg" alt="" class="bg lazyload">
+			</footer>
+
+
+			<div class="overlay"></div>
+		</div>
+
+
+		<section class="modal" id="callback_modal">
+			<div class="modal_title">Обратный звонок</div>
+
+			<form action="" class="form">
+				<div class="columns row">
+					<div class="line">
+						<div class="label">ИМЯ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="text" name="" value="" class="input">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="label">ТЕЛЕФОН <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="tel" name="" value="" class="input">
+						</div>
+					</div>
+				</div>
+
+				<div class="line agree">
+					<div class="field">
+						<label class="checkbox">
+							<input type="checkbox" name="agree" checked>
+
+							<div class="check">
+								<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+							</div>
+
+							<div>Соглашаюсь на обработку моих персональных данных и принимаю <a href="/" target="_blank">политику конфиденциальности</a>.</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">ОТПРАВИТЬ</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal" id="consult_modal">
+			<div class="modal_title">Заявка на консультацию</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="label">ИМЯ <span class="required">*</span></div>
+
+					<div class="field">
+						<input type="text" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">ТЕЛЕФОН ИЛИ E-MAIL <span class="required">*</span></div>
+
+					<div class="field">
+						<input type="text" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">СООБЩЕНИЕ</div>
+
+					<div class="field">
+						<textarea name=""></textarea>
+					</div>
+				</div>
+
+				<div class="line agree">
+					<div class="field">
+						<label class="checkbox">
+							<input type="checkbox" name="agree" checked>
+
+							<div class="check">
+								<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+							</div>
+
+							<div>Соглашаюсь на обработку моих персональных данных и принимаю <a href="/" target="_blank">политику конфиденциальности</a>.</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">ОТПРАВИТЬ</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal" id="login_modal">
+			<div class="modal_title">Авторизация</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="label">ЛОГИН</div>
+
+					<div class="field">
+						<input type="text" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">ПАРОЛЬ</div>
+
+					<div class="field">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_lock"></use></svg>
+						<input type="password" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">ВОЙТИ</button>
+
+					<button type="button" class="register_btn modal_btn" data-modal="register_modal">
+						<svg class="icon"><use xlink:href="images/sprite.svg#ic_register"></use></svg>
+						<span>ЗАРЕГИСТРИРОВАТЬСЯ</span>
+					</button>
+				</div>
+			</form>
+
+			<div class="btns">
+				<button class="btn recovery_btn modal_btn" data-modal="recovery_modal">Восстановить пароль</button>
+			</div>
+		</section>
+
+
+		<section class="modal" id="recovery_modal">
+			<div class="modal_title">Восстановление пароля</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="label">E-MAIL</div>
+
+					<div class="field">
+						<input type="email" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">ВОССТАНОВИТЬ</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal" id="register_modal">
+			<div class="modal_title">Регистрация</div>
+
+			<form action="" class="form">
+				<div class="line type">
+					<div class="field">
+						<label class="radio" data-info=".type_fields1">
+							<input type="radio" name="type" checked>
+							<div class="check"></div>
+							<div>Физлицо</div>
+						</label>
+					</div>
+
+					<div class="field">
+						<label class="radio" data-info=".type_fields2">
+							<input type="radio" name="type">
+							<div class="check"></div>
+							<div>Юрлицо</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="type_fields type_fields1" style="display: block;">
+					<div class="line">
+						<div class="label">ИМЯ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="text" name="" value="" class="input">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="label">ФАМИЛИЯ</div>
+
+						<div class="field">
+							<input type="text" name="" value="" class="input">
+						</div>
+					</div>
+				</div>
+
+				<div class="type_fields type_fields2">
+					<div class="line">
+						<div class="label">ЛОГИН/ИМЯ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="text" name="" value="" class="input">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="label">ИНН ОРГАНИЗАЦИИ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="number" name="" value="" class="input">
+						</div>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">ТЕЛЕФОН</div>
+
+					<div class="field">
+						<input type="tel" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="label">E-MAIL <span class="required">*</span></div>
+
+					<div class="field">
+						<input type="email" name="" value="" class="input">
+					</div>
+				</div>
+
+				<div class="columns row">
+					<div class="line">
+						<div class="label">ПАРОЛЬ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="password" name="" value="" class="input">
+						</div>
+					</div>
+
+					<div class="line">
+						<div class="label">ПОВТОРИТЕ ПАРОЛЬ <span class="required">*</span></div>
+
+						<div class="field">
+							<input type="password" name="" value="" class="input">
+						</div>
+					</div>
+				</div>
+
+				<div class="line agree">
+					<div class="field">
+						<label class="checkbox">
+							<input type="checkbox" name="agree" checked>
+
+							<div class="check">
+								<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
+							</div>
+
+							<div>Соглашаюсь на обработку моих персональных данных и принимаю <a href="/" target="_blank">политику конфиденциальности</a>.</div>
+						</label>
+					</div>
+				</div>
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+				</div>
+			</form>
+		</section>
+
+
+		<!-- Подключение javascript файлов -->
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.js"></script>
+		<script src="js/nice-select2.js"></script>
+		<script src="js/ion.rangeSlider.min.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
