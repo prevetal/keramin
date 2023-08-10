@@ -452,6 +452,13 @@
     }
 
 
+    .products .product .not_available .btn
+    {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+
 
     /*--------------
         Projects

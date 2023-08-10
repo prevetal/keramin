@@ -4520,6 +4520,43 @@ aside
 }
 
 
+.products .product .not_available
+{
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.products .product .not_available .label
+{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+.products .product .not_available .btn
+{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+
+    margin-left: auto;
+    padding: 9px 19px;
+
+    text-transform: uppercase;
+
+    background: #f4004d;
+}
+
+
 .products .product .old_price
 {
     color: #606060;
