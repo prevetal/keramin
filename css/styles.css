@@ -1610,6 +1610,47 @@ header .categories .sub .items a.more_link:hover
 
 
 
+header.fixed
+{
+    position: fixed;
+
+    margin: 0;
+
+    animation: moveDown .5s;
+
+    background: var(--bg);
+}
+
+
+header.fixed .logo,
+header.fixed .top,
+header.fixed .bottom
+{
+    display: none;
+}
+
+
+header.fixed .data
+{
+    padding: 24px 0;
+}
+
+header.fixed .data .links
+{
+    margin-left: 0;
+}
+
+
+@keyframes moveDown
+{
+    0%
+    {
+        transform: translateY(-100%);
+    }
+}
+
+
+
 /*-----------------
     Mob. header
 -----------------*/

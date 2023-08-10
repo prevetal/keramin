@@ -312,6 +312,27 @@
 
 
 
+    .header_wrap
+    {
+        height: auto !important;
+    }
+
+
+
+    header.fixed
+    {
+        animation: none;
+    }
+
+
+    header.fixed .top,
+    header.fixed .bottom
+    {
+        display: block;
+    }
+
+
+
     /*-----------------
         Mob. header
     -----------------*/

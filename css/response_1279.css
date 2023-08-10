@@ -89,27 +89,22 @@
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
+    header.fixed .data
+    {
+        padding: 16px 0;
+    }
+
+    header.fixed .data .links
+    {
+        display: flex;
+    }
 
 
-
-    /*---------------
-        Page head
-    ---------------*/
-
-
-
-    /*----------------
-        Block head
-    ----------------*/
-
-
-
-    /*------------------
-        Form elements
-    ------------------*/
+    header.fixed .search
+    {
+        width: calc(100% - 548px);
+        margin-left: 40px;
+    }
 
 
 

@@ -101,10 +101,10 @@
     }
 
 
-
-    /*-------------
-        Sidebar
-    -------------*/
+    header.fixed .data
+    {
+        padding: 20px 0;
+    }
 
 
 

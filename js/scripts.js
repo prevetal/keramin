@@ -884,6 +884,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Залипание блока
+	if (WW > 1023) {
+		new hcSticky('.sticky', {
+			top: 89
+		})
+	}
+
+
 	// Оформление заказа
 	$('.checkout_info .delivery_methods label').click(function (e) {
 		if (e.target.nodeName == 'LABEL') {
@@ -926,8 +934,28 @@ window.addEventListener('load', function () {
 
 		productsHeight(el, parseInt(styles.getPropertyValue('--count')))
 	})
+
+
+	// Фикс. шапка
+	headerInit   = true,
+	headerHeight = $('header').outerHeight()
+
+	$('header').wrap('<div class="header_wrap"></div>')
+	$('.header_wrap').height(headerHeight)
+
+	headerInit && $(window).scrollTop() > headerHeight
+		? $('header').addClass('fixed')
+		: $('header').removeClass('fixed')
 })
 
+
+
+window.addEventListener('scroll', function () {
+	// Фикс. шапка
+	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
+		? $('header').addClass('fixed')
+		: $('header').removeClass('fixed')
+})
 
 
 window.addEventListener('resize', function () {
@@ -946,6 +974,22 @@ window.addEventListener('resize', function () {
 
 			productsHeight(el, parseInt(styles.getPropertyValue('--count')))
 		})
+
+
+		// Фикс. шапка
+		headerInit = false
+		$('.header_wrap').height('auto')
+
+		setTimeout(() => {
+			headerInit   = true
+			headerHeight = $('header').outerHeight()
+
+			$('.header_wrap').height(headerHeight)
+
+			headerInit && $(window).scrollTop() > headerHeight
+				? $('header').addClass('fixed')
+				: $('header').removeClass('fixed')
+		}, 100)
 
 
 		// Моб. версия
