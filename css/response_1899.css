@@ -1051,6 +1051,36 @@
 
 
 
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .swiper-button-prev,
+    .shops_carousel .swiper-button-next
+    {
+        top: auto !important;
+        right: 0;
+        bottom: 100%;
+
+        margin: 0 0 24px;
+
+        transform: none;
+    }
+
+    .shops_carousel .swiper-button-prev
+    {
+        right: 48px;
+        left: auto;
+    }
+
+
+    .shops_carousel .item .name
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

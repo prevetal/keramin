@@ -897,6 +897,11 @@
         padding: 0;
     }
 
+
+
+    /*------------
+        Orders
+    ------------*/
     .orders .cart_info .product .info
     {
         width: calc(100% - 592px);
@@ -908,5 +913,22 @@
     .orders .cart_info .product .price.total
     {
         text-align: left;
+    }
+
+
+
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .item .name
+    {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+
+    .shops_carousel .item .location
+    {
+        line-height: 20px;
     }
 }

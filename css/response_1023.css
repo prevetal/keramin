@@ -940,6 +940,16 @@
 
 
 
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .item .thumb
+    {
+        margin-bottom: 16px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

@@ -1105,6 +1105,29 @@
 
 
 
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .swiper-slide
+    {
+        visibility: visible;
+
+        width: 360px;
+
+        pointer-events: auto;
+
+        opacity: 1;
+    }
+
+
+    .shops_carousel .swiper-button-prev,
+    .shops_carousel .swiper-button-next
+    {
+        display: none;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

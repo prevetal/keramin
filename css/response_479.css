@@ -649,6 +649,23 @@
 
 
 
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .swiper-slide
+    {
+        width: 300px;
+    }
+
+
+    .shops_carousel .item .name
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

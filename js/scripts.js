@@ -466,6 +466,70 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Карусель магазинов
+	const shopsСarouselSliders = [],
+		shopsСarousel = document.querySelectorAll('.shops_carousel .swiper')
+
+	shopsСarousel.forEach(function (el, i) {
+		el.classList.add('shops_carousel_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 12,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1024: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1900: {
+					spaceBetween: 40,
+					slidesPerView: 3
+				}
+			},
+			on: {
+				init: swiper => {
+					setTimeout(() => {
+						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.$el).find('.thumb').outerHeight() * 0.5
+						)
+					})
+				},
+				resize: swiper => {
+					setTimeout(() => {
+						$(swiper.$el).find('.swiper-button-next, .swiper-button-prev').css(
+							'top', $(swiper.$el).find('.thumb').outerHeight() * 0.5
+						)
+					})
+				}
+			}
+		}
+
+		shopsСarouselSliders.push(new Swiper('.shops_carousel_s' + i, options))
+	})
+
+
 	// Товар в избранное
 	$('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
 		e.preventDefault()

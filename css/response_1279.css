@@ -727,6 +727,31 @@
 
 
 
+    /*--------------------
+        Shops carousel
+    --------------------*/
+    .shops_carousel .item .thumb
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .shops_carousel .item .name
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    .shops_carousel .item .location
+    {
+        font-size: 14px;
+
+        margin-top: 8px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
