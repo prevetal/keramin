@@ -143,6 +143,15 @@
     }
 
 
+    .main_slider .percents
+    {
+        font-size: 80px;
+
+        right: -16px;
+        bottom: -12px;
+    }
+
+
 
     /*-----------------
         Collections

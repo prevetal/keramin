@@ -220,7 +220,10 @@
 
     .main_slider .percents
     {
-        height: 68px;
+        font-size: 120px;
+
+        right: -28px;
+        bottom: -20px;
     }
 
 

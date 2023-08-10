@@ -3431,11 +3431,14 @@ aside
 
 .main_slider .percents
 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    color: #f4004d;
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 100%;
 
-    display: block;
+    position: absolute;
+    right: -36px;
+    bottom: -24px;
 
     pointer-events: none;
 }

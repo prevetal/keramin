@@ -473,7 +473,10 @@
 
     .main_slider .percents
     {
-        height: 52px;
+        font-size: 92px;
+
+        right: -20px;
+        bottom: -14px;
     }
 
 
