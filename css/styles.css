@@ -4330,8 +4330,8 @@ aside
     border-top: 1px solid #ededed;
 
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -4352,6 +4352,7 @@ aside
 
     display: flex;
 
+    width: 150px;
     margin-left: auto;
 
     justify-content: flex-start;
@@ -4373,7 +4374,7 @@ aside
     display: flex;
 
     width: 31px;
-    height: 100%;
+    height: 40px;
 
     transition: color .2s linear;
 
@@ -4446,6 +4447,23 @@ aside
 }
 
 
+.products .product .amount .available
+{
+    color: #606060;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+
+    width: 100%;
+    margin-top: 4px;
+}
+
+.products .product .amount .available b
+{
+    color: var(--text_color);
+}
+
+
 .products .product .buy_btn
 {
     color: #fff;
@@ -4511,7 +4529,7 @@ aside
     display: flex;
 
     width: 100%;
-    margin-top: 16px;
+    margin-top: 4px;
 
     text-decoration: line-through;
 
@@ -7271,6 +7289,46 @@ aside
     text-align: center;
 
     background: #f9f9f9;
+}
+
+
+.product_info .buy .available
+{
+    color: #606060;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+
+    margin-top: 4px;
+}
+
+.product_info .buy .available b
+{
+    color: var(--text_color);
+}
+
+
+.product_info .buy .not_available .label
+{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+
+.product_info .buy .not_available .btn
+{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+
+    margin-top: 24px;
+    padding: 9px 19px;
+
+    text-transform: uppercase;
+
+    background: #f4004d;
 }
 
 

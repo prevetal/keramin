@@ -490,6 +490,11 @@
     }
 
 
+    .products .product .amount
+    {
+        width: 140px;
+    }
+
     .products .product .amount .input
     {
         width: 100px;

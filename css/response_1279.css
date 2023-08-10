@@ -321,6 +321,11 @@
     }
 
 
+    .products .product .amount
+    {
+        width: 128px;
+    }
+
     .products .product .amount .input
     {
         width: 88px;
@@ -345,8 +350,6 @@
     {
         font-size: 13px;
         line-height: 19px;
-
-        margin-top: 12px;
     }
 
 
