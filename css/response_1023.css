@@ -294,20 +294,8 @@
 
     header .categories .sub .items.columns
     {
-        display: block;
-
-        margin-left: 0;
-    }
-
-    header .categories .sub .items.columns > *
-    {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    header .categories .sub .items.columns > * + *
-    {
-        margin-top: 12px;
+        column-gap: 0;
+        column-count: 1;
     }
 
 

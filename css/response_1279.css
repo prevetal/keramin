@@ -63,7 +63,7 @@
     }
 
 
-    header .categories .sub .items.columns
+    /* header .categories .sub .items.columns
     {
         margin-left: -24px;
     }
@@ -71,11 +71,11 @@
     header .categories .sub .items.columns > *
     {
         margin-left: 24px;
-    }
+    } */
 
 
     header .categories .sub .items > * + *,
-    header .categories .sub .items.columns > * > * + *
+    header .categories .sub .items.columns > * + *
     {
         margin-top: 12px;
     }
