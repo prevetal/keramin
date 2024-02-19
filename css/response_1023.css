@@ -129,6 +129,10 @@
     {
         display: flex;
         overflow: auto;
+        align-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        justify-content: flex-start;
 
         height: 100%;
         min-height: -moz-available;
@@ -136,10 +140,6 @@
         min-height:         fill-available;
         padding: 24px 0;
 
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
         overscroll-behavior-y: contain;
     }
 
@@ -151,18 +151,18 @@
 
     header .top
     {
+        order: 2;
+
         margin-top: 24px;
         padding: 0 0 24px;
-
-        order: 2;
     }
 
 
     header .data
     {
-        padding: 24px 0;
-
         order: 1;
+
+        padding: 24px 0;
     }
 
 
@@ -223,19 +223,19 @@
 
     header .search
     {
+        order: 2;
+
         width: 100%;
         margin-top: 16px;
         margin-left: 0;
-
-        order: 2;
     }
 
 
     header .icon_links
     {
-        width: 100%;
-
         justify-content: center;
+
+        width: 100%;
     }
 
 
@@ -254,9 +254,9 @@
 
     header .categories > * > a
     {
-        min-height: 0;
-
         justify-content: flex-start;
+
+        min-height: 0;
     }
 
 
@@ -380,9 +380,9 @@
 
     .text_block .image_block > div
     {
-        margin-top: 24px;
-
         order: 2;
+
+        margin-top: 24px;
     }
 
 
@@ -629,10 +629,10 @@
 
     .product_info .features
     {
+        order: 0;
+
         width: calc(50% - 12px);
         margin-top: 0;
-
-        order: 0;
     }
 
 
@@ -741,11 +741,11 @@
     --------------*/
     .articles .article .data
     {
+        order: 2;
+
         width: 100%;
         min-height: 0;
         padding: 47px 23px 23px;
-
-        order: 2;
     }
 
 

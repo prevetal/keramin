@@ -224,9 +224,9 @@
 
     .text_block .image_block > div
     {
-        margin-top: 24px;
-
         order: 2;
+
+        margin-top: 24px;
     }
 
 
@@ -308,9 +308,9 @@
 
     .collections .grid > *.big_w
     {
-        width: calc(100% - 24px);
-
         order: 2;
+
+        width: calc(100% - 24px);
     }
 
 
@@ -646,10 +646,10 @@
 
     .product_info .features
     {
+        order: 2;
+
         width: 100%;
         margin-top: 24px;
-
-        order: 2;
     }
 
 
@@ -1067,9 +1067,9 @@
 
     .orders .order .head
     {
-        padding-right: 0;
-
         flex-wrap: wrap;
+
+        padding-right: 0;
     }
 
 

@@ -90,9 +90,9 @@
 
     header .categories .sub .row
     {
-        margin-left: 0;
-
         justify-content: space-between;
+
+        margin-left: 0;
     }
 
     header .categories .sub .row > *

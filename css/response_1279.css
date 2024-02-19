@@ -459,10 +459,10 @@
 
     .product_info .features
     {
+        order: 2;
+
         width: 100%;
         margin-top: 40px;
-
-        order: 2;
     }
 
 

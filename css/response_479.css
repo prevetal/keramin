@@ -164,10 +164,10 @@
     .collections .grid > *,
     .collections .grid > *.big_w
     {
+        order: 0;
+
         width: 100%;
         margin-left: 0;
-
-        order: 0;
     }
 
 

@@ -1,12 +1,14 @@
 .swiper-button-next,
 .swiper-button-prev
 {
-    color: #f4004d;
-
     top: 0;
     bottom: 0;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     width: 34px;
     height: 25px;
@@ -15,10 +17,7 @@
     transition: color .2s linear;
     transform: none;
 
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
+    color: #f4004d;
 }
 
 .swiper-button-prev
@@ -80,16 +79,15 @@
     left: 0;
 
     display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
     width: auto;
     height: 2px;
 
     pointer-events: none;
-
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
 }
 
 .swiper-pagination-bullet
