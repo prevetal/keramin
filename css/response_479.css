@@ -682,6 +682,108 @@
 
 
 
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .cont
+    {
+        padding-inline: 8px;
+    }
+
+
+
+    .compare_info .categories
+    {
+        gap: 8px;
+    }
+
+
+    .compare_info .categories a
+    {
+        padding: 2px 2px 2px 12px;
+
+        font-size: 11px;
+    }
+
+
+    .compare_info .categories .count
+    {
+        font-size: 13px;
+    }
+
+
+    .compare_info .categories .delete_btn
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .compare_info .btns
+    {
+        width: 100%;
+    }
+
+
+
+    .compare_info .mobile
+    {
+        width: calc(100% + 16px);
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+
+
+    .compare_info .mobile .top,
+    .compare_info .mobile .bottom
+    {
+        display: block;
+    }
+
+
+    .compare_info .mobile .btns
+    {
+        padding-inline: 8px;
+    }
+
+
+    .compare_info .mobile .product .info
+    {
+        margin-right: 4px;
+        margin-left: 8px;
+    }
+
+    .compare_info .mobile .col:nth-child(2) .product .info
+    {
+        margin-right: 8px;
+        margin-left: 4px;
+    }
+
+
+    .compare_info .mobile .product .features > *
+    {
+        padding-inline: 8px 4px;
+    }
+
+    .compare_info .mobile .col:nth-child(2n) .product .features > *
+    {
+        padding-inline: 4px 8px;
+    }
+
+
+    .compare_info .mobile .controls
+    {
+        padding: 9px 12px 9px 16px;
+    }
+
+    .compare_info .mobile .col:nth-child(2) .controls
+    {
+        padding: 9px 14px 9px 12px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

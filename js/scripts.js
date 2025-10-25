@@ -41,7 +41,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Карусель товаров
 	const productsSliders = [],
-		products = document.querySelectorAll('.products .swiper')
+		productThumbsSliders = [],
+		products = document.querySelectorAll('.products .swiper.main'),
+		productThumbs = document.querySelectorAll('.products .product .swiper.images')
+
+	productThumbs.forEach(function (el, i) {
+		el.classList.add('product_thumbs_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			nested: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 0,
+			slidesPerView: 1,
+			on: {
+				init(swiper) {
+					const customPagination = $(swiper.el).find('.swiper-custom-pagination')
+
+					for (let i = 0; i < (this.slides.length - 2); i++) {
+						const span = $('<span>')
+						.addClass('custom-bullet')
+						.on('mouseover', () => this.slideToLoop(i))
+
+						customPagination.append(span)
+					}
+				}
+			}
+		}
+
+		productThumbsSliders.push(new Swiper('.product_thumbs_s' + i, options))
+	})
 
 	products.forEach(function (el, i) {
 		el.classList.add('products_s' + i)
@@ -530,8 +568,165 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Сравнение
+	let compareTopSlider = document.querySelector('.compare_info .desktop .top .swiper'),
+		compareBottomSlider = document.querySelector('.compare_info .desktop .bottom .swiper'),
+		compareMobileTopSlider = document.querySelectorAll('.compare_info .mobile .top .swiper'),
+		compareMobileBottomSlider = document.querySelectorAll('.compare_info .mobile .bottom .swiper'),
+		compareMobileTopSliders = [],
+		compareMobileBottomSliders = []
+
+	if (compareTopSlider && compareBottomSlider) {
+		const compareTopSlider = new Swiper('.compare_info .desktop .top .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 8,
+					slidesPerView: 2
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1280: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1900: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			}
+		})
+
+		const compareBottomSlider = new Swiper('.compare_info .desktop .bottom .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			breakpoints: {
+				0: {
+					spaceBetween: 8,
+					slidesPerView: 2
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1280: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1900: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			},
+			on: {
+				resize: swiper => setTimeout(() => compareHeight($(swiper.el)))
+			}
+		})
+
+		compareTopSlider.controller.control = compareBottomSlider
+		compareBottomSlider.controller.control = compareTopSlider
+	}
+
+
+	if (compareMobileTopSlider && compareMobileBottomSlider) {
+		compareMobileTopSlider.forEach(function (el, i) {
+			el.classList.add('compare_mobile_top_s' + i)
+
+			let options = {
+				loop: true,
+				speed: 500,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'fraction',
+					renderFraction: function (currentClass, totalClass) {
+						return `<span class="${currentClass}"></span>&nbsp;из&nbsp;<span class="${totalClass}"></span>`
+					},
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				on: {
+					init: swiper => {
+						setTimeout(() => {
+							let items = swiper.el.querySelectorAll('.product')
+
+							items.forEach(el => el.style.height = 'auto')
+
+							setHeight(items)
+						})
+					},
+				}
+			}
+
+			compareMobileTopSliders.push(new Swiper('.compare_mobile_top_s' + i, options))
+		})
+
+		compareMobileBottomSlider.forEach(function (el, i) {
+			el.classList.add('compare_mobile_bottom_s' + i)
+
+			let options = {
+				loop: true,
+				speed: 500,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1,
+				on: {
+					resize: swiper => setTimeout(() => compareMobileHeight($(swiper.el)))
+				}
+			}
+
+			compareMobileBottomSliders.push(new Swiper('.compare_mobile_bottom_s' + i, options))
+		})
+
+		compareMobileTopSliders.forEach((topSwiper, i) => {
+			const bottomSwiper = compareMobileBottomSliders[i]
+
+			if (bottomSwiper) {
+				topSwiper.controller.control = bottomSwiper
+				bottomSwiper.controller.control = topSwiper
+			}
+		})
+	}
+
+
 	// Товар в избранное
 	$('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+	})
+
+
+	// Товар в сравнение
+	$('.product .compare_btn, .product_info .compare_btn').click(function(e) {
 		e.preventDefault()
 
 		$(this).toggleClass('active')
@@ -1018,24 +1213,53 @@ window.addEventListener('load', function () {
 
 
 	// Фикс. шапка
-	headerInit   = true,
-	headerHeight = $('header').outerHeight()
+	if (!$('header').hasClass('no_fixed')) {
+		headerInit   = true,
+		headerHeight = $('header').outerHeight()
 
-	$('header').wrap('<div class="header_wrap"></div>')
-	$('.header_wrap').height(headerHeight)
+		$('header').wrap('<div class="header_wrap"></div>')
+		$('.header_wrap').height(headerHeight)
 
-	headerInit && $(window).scrollTop() > headerHeight
-		? $('header').addClass('fixed')
-		: $('header').removeClass('fixed')
+		headerInit && $(window).scrollTop() > headerHeight
+			? $('header').addClass('fixed')
+			: $('header').removeClass('fixed')
+	}
 })
 
 
 
 window.addEventListener('scroll', function () {
-	// Фикс. шапка
-	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
-		? $('header').addClass('fixed')
-		: $('header').removeClass('fixed')
+	if (typeof headerInit !== 'undefined' && headerInit && !$('header').hasClass('no_fixed')) {
+        const header = $('header')
+
+        if ($(window).scrollTop() > headerHeight) {
+            header.addClass('fixed')
+
+            headerHeight = header.outerHeight()
+
+            $('.compare_info .desktop .top').css('top', headerHeight + 'px')
+        } else {
+            header.removeClass('fixed')
+
+            $('.compare_info .desktop .top').css('top', 0)
+        }
+    }
+
+
+	// Фикс верхней части страницы сравнения
+	const compareHead = document.querySelector('.compare_info .desktop .top'),
+		compareMobileHead = document.querySelector('.compare_info .mobile .top')
+
+	const rect = compareHead.getBoundingClientRect(),
+		rectMob = compareMobileHead.getBoundingClientRect()
+
+	rect.top <= 0
+		? compareHead.classList.add('is-stuck')
+		: compareHead.classList.remove('is-stuck')
+
+	rectMob.top <= 0
+		? compareMobileHead.classList.add('is-stuck')
+		: compareMobileHead.classList.remove('is-stuck')
 })
 
 
@@ -1058,19 +1282,21 @@ window.addEventListener('resize', function () {
 
 
 		// Фикс. шапка
-		headerInit = false
-		$('.header_wrap').height('auto')
+		if (!$('header').hasClass('no_fixed')) {
+			headerInit = false
+			$('.header_wrap').height('auto')
 
-		setTimeout(() => {
-			headerInit   = true
-			headerHeight = $('header').outerHeight()
+			setTimeout(() => {
+				headerInit   = true
+				headerHeight = $('header').outerHeight()
 
-			$('.header_wrap').height(headerHeight)
+				$('.header_wrap').height(headerHeight)
 
-			headerInit && $(window).scrollTop() > headerHeight
-				? $('header').addClass('fixed')
-				: $('header').removeClass('fixed')
-		}, 100)
+				headerInit && $(window).scrollTop() > headerHeight
+					? $('header').addClass('fixed')
+					: $('header').removeClass('fixed')
+			}, 100)
+		}
 
 
 		// Моб. версия
@@ -1113,4 +1339,80 @@ function productsHeight(context, step) {
 		finish = finish + step
 		i++
 	})
+}
+
+
+
+// Compare height
+function compareHeight(slider) {
+	$('.compare_info .desktop .bottom .features > *').height('auto')
+
+	let productFeatures = slider.find('.features'),
+		compareFeatures = $('.compare_info .desktop .bottom .col_left .features > *'),
+		sizes = new Object()
+
+	compareFeatures.each(function () {
+		if (sizes[$(this).index()]) {
+			if ($(this).outerHeight() > sizes[$(this).index()]) {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		} else {
+			sizes[$(this).index()] = $(this).outerHeight()
+		}
+	})
+
+	productFeatures.each(function () {
+		$(this).find('> *').each(function () {
+			if (sizes[$(this).index()]) {
+				if ($(this).outerHeight() > sizes[$(this).index()]) {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			} else {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		})
+	})
+
+	compareFeatures.each(function(index) {
+		$(this).innerHeight(sizes[index])
+	})
+
+	productFeatures.each(function() {
+		$(this).find('> *').each(function(index) {
+			$(this).innerHeight(sizes[index])
+		})
+	})
+}
+
+
+function compareMobileHeight() {
+    $('.compare_info .mobile .bottom .features > *').height('auto')
+
+	let sizes = new Object()
+
+    $('.compare_info .mobile .bottom .swiper').each(function() {
+        const features = $(this).find('.features')
+
+        features.each(function () {
+			$(this).find('> *').each(function () {
+				if (sizes[$(this).index()]) {
+					if ($(this).outerHeight() > sizes[$(this).index()]) {
+						sizes[$(this).index()] = $(this).outerHeight()
+					}
+				} else {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			})
+		})
+    })
+
+    $('.compare_info .mobile .bottom .swiper').each(function() {
+        const features = $(this).find('.features')
+
+        features.each(function () {
+			$(this).find('> *').each(function(index) {
+				$(this).innerHeight(sizes[index])
+			})
+		})
+    });
 }

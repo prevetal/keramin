@@ -76,8 +76,7 @@
 
     header .search
     {
-        width: calc(100% - 894px);
-        margin-left: 60px;
+        width: calc(100% - 920px);
     }
 
 
@@ -114,6 +113,16 @@
     .page_head
     {
         padding-top: 24px;
+    }
+
+
+
+    .page_title .count
+    {
+        margin-top: 6px;
+        margin-left: 12px;
+
+        font-size: 30px;
     }
 
 
@@ -933,6 +942,96 @@
     .shops_carousel .item .location
     {
         line-height: 20px;
+    }
+
+
+
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .categories
+    {
+        margin-bottom: 32px;
+
+        gap: 20px;
+    }
+
+
+    .compare_info .categories a
+    {
+        padding-left: 16px;
+    }
+
+
+    .compare_info .categories .count
+    {
+        font-size: var(--font_size);
+    }
+
+
+
+    .compare_info .col_left
+    {
+        width: 320px;
+
+        gap: 20px;
+    }
+
+
+
+    .compare_info .btns
+    {
+        width: 220px;
+
+        gap: 20px;
+    }
+
+
+    .compare_info .btns .btn
+    {
+        height: 44px;
+    }
+
+
+
+    .compare_info .features
+    {
+        line-height: 110%;
+    }
+
+
+    .compare_info .features > *
+    {
+        padding: 8px 16px;
+    }
+
+
+
+    .compare_info .col_main
+    {
+        width: calc(100% - 320px);
+    }
+
+
+
+    .compare_info .product
+    {
+        gap: 20px;
+    }
+
+
+    .compare_info .product .buy,
+    .compare_info .product .bottom
+    {
+        padding-right: 0;
+    }
+
+
+    .compare_info .product .features > *
+    {
+        width: calc(100% + 24px);
+        margin-left: -24px;
+        padding-inline: 24px 0;
     }
 
 
