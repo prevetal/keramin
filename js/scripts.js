@@ -987,6 +987,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		parent.toggleClass('active').find('.data').slideToggle(300)
 	})
+
+
+	// Location modal
+	if (document.getElementById('location_modal')) {
+		Fancybox.show([{
+			src: document.getElementById('location_modal'),
+			type: 'inline',
+			closeButton: false
+		}])
+	}
+
+
+	$('body').on('click', '.modal .close_btn', e => {
+		e.preventDefault()
+
+		Fancybox.close()
+	})
 })
 
 

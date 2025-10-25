@@ -49,11 +49,11 @@
 
     .form .checkbox
     {
-        font-size: 12px;
-        line-height: 18px;
-
         min-height: 20px;
         padding-left: 32px;
+
+        font-size: 12px;
+        line-height: 18px;
     }
 
 
@@ -145,10 +145,10 @@
 
     .main_slider .percents
     {
-        font-size: 80px;
-
         right: -16px;
         bottom: -12px;
+
+        font-size: 80px;
     }
 
 
@@ -372,10 +372,10 @@
 
     .product_info .buy .price .val
     {
+        margin-top: 4px;
+
         font-size: 26px;
         line-height: 100%;
-
-        margin-top: 4px;
     }
 
 
@@ -388,9 +388,9 @@
 
     .product_info .buy .unit .exp
     {
-        font-size: 13px;
-
         margin-top: 12px;
+
+        font-size: 13px;
     }
 
 
@@ -422,9 +422,9 @@
 
     .product_info .info .price .val
     {
-        font-size: 24px;
-
         margin-top: 4px;
+
+        font-size: 24px;
     }
 
 
@@ -651,11 +651,11 @@
 
     .lk_info .personal_discount
     {
-        font-size: 15px;
-        line-height: 21px;
-
         width: 100%;
         padding: 22px;
+
+        font-size: 15px;
+        line-height: 21px;
     }
 
     .lk_info .personal_discount .val
@@ -712,5 +712,47 @@
     {
         margin-top: 24px;
         padding-top: 19px;
+    }
+
+
+
+    #city_modal
+    {
+        padding: 40px 28px;
+    }
+
+
+    #city_modal .logo
+    {
+        width: 160px;
+        margin-bottom: 28px;
+    }
+
+
+    #city_modal .region .title
+    {
+        font-size: 17px;
+        line-height: 23px;
+    }
+
+
+    #city_modal .alphabet
+    {
+        column-gap: 0;
+        column-count: 1;
+    }
+
+
+
+    #location_modal
+    {
+        padding: 40px 28px;
+    }
+
+
+    #location_modal .logo
+    {
+        width: 160px;
+        margin-bottom: 28px;
     }
 }

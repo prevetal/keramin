@@ -236,14 +236,14 @@ html.custom_scroll
 
 body
 {
-    font: var(--font_size) var(--font_family);
-    font-weight: 300;
-    line-height: 22px;
-
     height: 100%;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
     min-height:         fill-available;
+
+    font: var(--font_size) var(--font_family);
+    font-weight: 300;
+    line-height: 22px;
 
     color: var(--text_color);
 }
@@ -256,12 +256,12 @@ body.menu_open
 
 button
 {
+    display: inline-block;
+
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     line-height: inherit;
-
-    display: inline-block;
 
     cursor: pointer;
     vertical-align: top;
@@ -275,7 +275,6 @@ button
 .wrap
 {
     position: relative;
-    z-index: 9;
 
     display: flex;
     overflow: hidden;
@@ -283,6 +282,8 @@ button
 
     min-width: 375px;
     min-height: 100%;
+
+    z-index: 9;
 
     background: var(--bg);
 }
@@ -378,7 +379,6 @@ button
 .overlay
 {
     position: fixed;
-    z-index: 100;
     top: 0;
     left: 0;
 
@@ -386,6 +386,8 @@ button
 
     width: 100%;
     height: 100%;
+
+    z-index: 100;
 
     opacity: .65;
     background: #000;
@@ -443,14 +445,14 @@ button
 --------------*/
 .all_link
 {
-    font-size: 13px;
-    font-weight: 700;
-
     position: relative;
 
     display: flex;
 
     margin-top: 40px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     color: #f4004d;
 }
@@ -543,8 +545,6 @@ button
 ----------------*/
 .pagination
 {
-    font-size: 18px;
-
     display: flex;
     overflow: hidden;
     align-content: flex-start;
@@ -553,6 +553,8 @@ button
     justify-content: center;
 
     margin-top: 90px;
+
+    font-size: 18px;
 }
 
 
@@ -606,12 +608,12 @@ button
 .pagination a,
 .pagination .sep
 {
-    line-height: 38px;
-
     display: inline-block;
 
     width: 40px;
     height: 40px;
+
+    line-height: 38px;
 
     transition: .2s linear;
     text-align: center;
@@ -679,8 +681,8 @@ button
 .accordion_item
 {
     position: relative;
-    z-index: 1;
 
+    z-index: 1;
     transition: border-color .2s linear;
 
     border-top: 1px solid #ededed;
@@ -711,11 +713,11 @@ button
 
 .accordion_item .head .title
 {
+    max-width: calc(100% - 24px);
+
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
-
-    max-width: calc(100% - 24px);
 
     transition: color .2s linear;
 }
@@ -738,13 +740,13 @@ button
 
 .accordion_item .data
 {
-    font-size: 14px;
-    line-height: 26px;
-
     display: none;
 
     margin-top: -8px;
     padding: 0 0 24px;
+
+    font-size: 14px;
+    line-height: 26px;
 }
 
 
@@ -796,9 +798,6 @@ button
 
 .tabs .btn
 {
-    font-size: 14px;
-    font-weight: 500;
-
     position: relative;
 
     display: flex;
@@ -808,6 +807,9 @@ button
     justify-content: center;
 
     padding: 8px 18px;
+
+    font-size: 14px;
+    font-weight: 500;
 
     transition: .2s linear;
     text-align: center;
@@ -883,11 +885,12 @@ button
 header
 {
     position: relative;
-    z-index: 9;
     top: 0;
     left: 0;
 
     width: 100%;
+
+    z-index: 9;
 }
 
 
@@ -972,13 +975,13 @@ header .cont
 
 header .top .links
 {
-    font-size: 14px;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -1039,9 +1042,6 @@ header .phone a
 
 header .callback_btn
 {
-    font-size: 12px;
-    font-weight: 500;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -1049,6 +1049,9 @@ header .callback_btn
     justify-content: flex-start;
 
     margin-left: 33px;
+
+    font-size: 12px;
+    font-weight: 500;
 
     transition: color .2s linear;
 
@@ -1145,8 +1148,6 @@ header .logo img
 
 header .data .links
 {
-    font-weight: 500;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -1154,6 +1155,8 @@ header .data .links
     justify-content: flex-start;
 
     margin-left: 70px;
+
+    font-weight: 500;
 
     color: #f4004d;
 }
@@ -1246,15 +1249,15 @@ header .search form :-ms-input-placeholder
 
 header .search .input
 {
-    font-family: var(--font_family);
-    font-size: 15px;
-    font-weight: 500;
-
     display: block;
 
     width: 100%;
     height: 40px;
     padding: 0 49px 0 15px;
+
+    font-family: var(--font_family);
+    font-size: 15px;
+    font-weight: 500;
 
     transition: .2s linear;
 
@@ -1273,7 +1276,6 @@ header .search .input:focus
 header .search .submit_btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 0;
 
@@ -1286,6 +1288,7 @@ header .search .submit_btn
     width: 45px;
     height: 100%;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #c8929c;
@@ -1348,10 +1351,6 @@ header .icon_links .btn
 
 header .icon_links .count
 {
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 17px;
-
     position: absolute;
     top: 2px;
     right: 2px;
@@ -1359,6 +1358,10 @@ header .icon_links .count
     min-width: 16px;
     height: 16px;
     padding: 0 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 17px;
 
     text-align: center;
 
@@ -1415,9 +1418,6 @@ header .categories
 
 header .categories > * > a
 {
-    font-size: 18px;
-    line-height: normal;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -1425,6 +1425,9 @@ header .categories > * > a
     justify-content: center;
 
     min-height: 94px;
+
+    font-size: 18px;
+    line-height: normal;
 
     transition: color .2s linear;
     text-align: center;
@@ -1458,7 +1461,6 @@ header .categories > * > a.active
 header .categories .sub
 {
     position: absolute;
-    z-index: 9;
     top: calc(100% + 30px);
     left: 0;
 
@@ -1467,6 +1469,7 @@ header .categories .sub
     width: 100%;
     padding: 36px 0 52px;
 
+    z-index: 9;
     transition: .2s linear;
     pointer-events: none;
 
@@ -1513,11 +1516,11 @@ header .categories .sub .row > *
 
 header .categories .sub .title
 {
+    margin-bottom: 16px;
+
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
-
-    margin-bottom: 16px;
 }
 
 
@@ -1571,10 +1574,10 @@ header .categories .sub .items.columns > * > * + *
 
 header .categories .sub .items a
 {
+    display: block;
+
     font-size: 15px;
     line-height: 19px;
-
-    display: block;
 
     transition: color .2s linear;
     text-decoration: none;
@@ -1651,7 +1654,6 @@ header.fixed .data .links
 .mob_header
 {
     position: relative;
-    z-index: 9;
     top: 0;
     left: 0;
 
@@ -1659,6 +1661,8 @@ header.fixed .data .links
 
     width: 100%;
     padding: 16px 0;
+
+    z-index: 9;
 }
 
 
@@ -1730,10 +1734,6 @@ header.fixed .data .links
 
 .mob_header .icon_links .count
 {
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 17px;
-
     position: absolute;
     top: 2px;
     right: 2px;
@@ -1741,6 +1741,10 @@ header.fixed .data .links
     min-width: 16px;
     height: 16px;
     padding: 0 4px;
+
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 17px;
 
     text-align: center;
 
@@ -1860,13 +1864,13 @@ aside
 -------------*/
 .filter .mob_filter_btn
 {
-    font-weight: 500;
-
     display: none;
 
     width: 100%;
     height: 40px;
     margin-bottom: 20px;
+
+    font-weight: 500;
 
     text-transform: uppercase;
 
@@ -1891,12 +1895,12 @@ aside
 
 .filter .item .name
 {
-    font-size: 14px;
-    font-weight: 700;
-
     position: relative;
 
     padding-right: 32px;
+
+    font-size: 14px;
+    font-weight: 700;
 
     cursor: pointer;
     text-transform: uppercase;
@@ -1924,6 +1928,7 @@ aside
 .filter .item .name .icon:after
 {
     position: absolute;
+    inset: 0;
 
     display: block;
 
@@ -1934,8 +1939,6 @@ aside
     content: '';
 
     background: currentColor;
-
-    inset: 0;
 }
 
 .filter .item .name .icon:after
@@ -2013,13 +2016,13 @@ aside
 
 .filter .spoler_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     position: relative;
 
     margin-top: 12px;
     padding-right: 13px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-transform: uppercase;
@@ -2066,9 +2069,6 @@ aside
 
 .filter .reset_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -2076,6 +2076,9 @@ aside
     justify-content: flex-start;
 
     margin-left: 25px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     color: #f4004d;
 }
@@ -2145,13 +2148,13 @@ aside
 
 .page_title
 {
-    font-size: var(--font_size_title);
-    font-weight: 700;
-    line-height: calc(var(--font_size_title) + 20px);
-
     display: block;
 
     margin-top: 24px;
+
+    font-size: var(--font_size_title);
+    font-weight: 700;
+    line-height: calc(var(--font_size_title) + 20px);
 }
 
 
@@ -2167,11 +2170,11 @@ aside
 
 .block_head .title
 {
+    display: block;
+
     font-size: var(--font_size_title);
     font-weight: 700;
     line-height: calc(100% + 20px);
-
-    display: block;
 }
 
 
@@ -2283,10 +2286,10 @@ aside
 
 .form .label
 {
+    margin-bottom: 8px;
+
     font-size: 13px;
     font-weight: 700;
-
-    margin-bottom: 8px;
 
     text-transform: uppercase;
 }
@@ -2307,7 +2310,6 @@ aside
 .form .field > .icon
 {
     position: absolute;
-    z-index: 5;
     top: 0;
     right: 15px;
     bottom: 0;
@@ -2318,6 +2320,7 @@ aside
     height: 22px;
     margin: auto;
 
+    z-index: 5;
     pointer-events: none;
 
     color: #606060;
@@ -2326,15 +2329,15 @@ aside
 
 .form .input
 {
-    font-family: var(--font_family);
-    font-size: 14px;
-    font-weight: 300;
-
     display: block;
 
     width: 100%;
     height: 40px;
     padding: 0 15px;
+
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-weight: 300;
 
     transition: border-color .2s linear;
 
@@ -2362,15 +2365,15 @@ aside
 
 .form textarea
 {
-    font-family: var(--font_family);
-    font-size: 14px;
-    font-weight: 300;
-
     display: block;
 
     width: 100%;
     height: 88px;
     padding: 9px 15px;
+
+    font-family: var(--font_family);
+    font-size: 14px;
+    font-weight: 300;
 
     resize: none;
     transition: border-color .2s linear;
@@ -2415,14 +2418,14 @@ aside
 
 .form .file label
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    font-size: 13px;
+    font-weight: 700;
 
     cursor: pointer;
     transition: color .2s linear;
@@ -2469,7 +2472,6 @@ aside
 .form .file .clear_btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 0;
 
@@ -2481,6 +2483,8 @@ aside
 
     width: 40px;
     height: 40px;
+
+    z-index: 3;
 
     color: #f4004d;
 }
@@ -2501,9 +2505,6 @@ aside
 
 .form .radio
 {
-    font-size: 15px;
-    line-height: 23px;
-
     position: relative;
 
     display: flex;
@@ -2514,6 +2515,9 @@ aside
 
     min-height: 23px;
     padding-left: 29px;
+
+    font-size: 15px;
+    line-height: 23px;
 
     cursor: pointer;
 }
@@ -2568,9 +2572,6 @@ aside
 
 .form .checkbox
 {
-    font-size: 13px;
-    line-height: 23px;
-
     position: relative;
 
     display: flex;
@@ -2581,6 +2582,9 @@ aside
 
     min-height: 23px;
     padding-left: 29px;
+
+    font-size: 13px;
+    line-height: 23px;
 
     cursor: pointer;
 }
@@ -2686,11 +2690,11 @@ aside
 
 .form .submit_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     height: 40px;
     padding: 0 19px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: .2s linear;
     text-transform: uppercase;
@@ -2707,9 +2711,6 @@ aside
 
 .form .register_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -2717,6 +2718,9 @@ aside
     justify-content: flex-start;
 
     margin-left: 20px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-transform: uppercase;
@@ -2792,9 +2796,9 @@ aside
 
 .text_block .big
 {
-    font-size: 20px;
-
     padding: 4px 0;
+
+    font-size: 20px;
 }
 
 
@@ -2812,20 +2816,20 @@ aside
 
 .text_block h2
 {
+    margin-bottom: 30px;
+
     font-size: 45px;
     font-weight: 700;
     line-height: 65px;
-
-    margin-bottom: 30px;
 }
 
 .text_block h3
 {
+    margin-bottom: 30px;
+
     font-size: 40px;
     font-weight: 700;
     line-height: 60px;
-
-    margin-bottom: 30px;
 }
 
 .text_block h4
@@ -2960,11 +2964,11 @@ aside
 
 .text_block table th
 {
+    padding: 11px 17px;
+
     font-size: 14px;
     font-weight: 700;
     line-height: 26px;
-
-    padding: 11px 17px;
 
     text-align: left;
     vertical-align: middle;
@@ -2987,10 +2991,10 @@ aside
 
 .text_block table td
 {
+    padding: 11px 17px;
+
     font-size: 14px;
     font-weight: 500;
-
-    padding: 11px 17px;
 
     text-align: left;
     vertical-align: middle;
@@ -3012,10 +3016,6 @@ aside
 .text_block blockquote,
 .text_block q
 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 35px;
-
     position: relative;
 
     display: block;
@@ -3024,6 +3024,10 @@ aside
     margin-top: 90px;
     margin-bottom: 90px;
     padding: 89px 352px 89px 152px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 35px;
 
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
@@ -3126,16 +3130,16 @@ aside
 
 .text_block ol li:before
 {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
-
     position: absolute;
     top: 2px;
     left: 0;
 
     width: 20px;
     height: 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
 
     content: counter(li);
     counter-increment: li;
@@ -3270,6 +3274,7 @@ aside
 .text_block .slider .thumbs .btn span
 {
     position: absolute;
+    inset: 0;
 
     overflow: hidden;
 
@@ -3278,8 +3283,6 @@ aside
     margin: auto;
 
     background: #d8d8d8;
-
-    inset: 0;
 }
 
 .text_block .slider .thumbs .btn img
@@ -3316,7 +3319,6 @@ aside
 .main_slider .swiper-slide
 {
     position: relative;
-    z-index: 3;
 
     display: flex;
     overflow: hidden;
@@ -3327,6 +3329,8 @@ aside
 
     min-height: 600px;
 
+    z-index: 3;
+
     background: #ddd;
 }
 
@@ -3334,7 +3338,6 @@ aside
 .main_slider .img
 {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
 
@@ -3343,6 +3346,8 @@ aside
     width: 100%;
     height: 100%;
 
+    z-index: 1;
+
     object-fit: cover;
 }
 
@@ -3350,11 +3355,12 @@ aside
 .main_slider .data
 {
     position: relative;
-    z-index: 5;
 
     width: 681px;
     max-width: 100%;
     padding: 50px 58px 40px;
+
+    z-index: 5;
 
     background: rgba(255, 255, 255,.7);
 }
@@ -3370,23 +3376,23 @@ aside
 
 .main_slider .desc
 {
-    line-height: 28px;
-
     width: 488px;
     max-width: 100%;
     margin-top: 4px;
+
+    line-height: 28px;
 }
 
 
 .main_slider .link
 {
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 22px;
-
     display: inline-block;
 
     margin-top: 16px;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
 
     transition: color .2s linear;
     text-align: center;
@@ -3405,13 +3411,13 @@ aside
 
 .main_slider .percents
 {
-    font-size: 160px;
-    font-weight: 700;
-    line-height: 100%;
-
     position: absolute;
     right: -36px;
     bottom: -24px;
+
+    font-size: 160px;
+    font-weight: 700;
+    line-height: 100%;
 
     pointer-events: none;
 
@@ -3442,6 +3448,7 @@ aside
 .collections
 {
     position: relative;
+
     z-index: 3;
 }
 
@@ -3449,6 +3456,7 @@ aside
 .collections .cont
 {
     position: relative;
+
     z-index: 3;
 }
 
@@ -3456,7 +3464,6 @@ aside
 .collections .bg
 {
     position: absolute;
-    z-index: 1;
     top: -84px;
     left: 50%;
 
@@ -3466,6 +3473,7 @@ aside
     height: 273px;
     margin-left: -1028px;
 
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -3517,7 +3525,6 @@ aside
 .collections .grid .collection .thumb:after
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -3527,6 +3534,7 @@ aside
     height: 100%;
 
     content: '';
+    z-index: 3;
     transition: opacity .2s linear;
 
     opacity: 0;
@@ -3551,17 +3559,17 @@ aside
 
 .collections .grid .collection .name
 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 70px;
-
     position: absolute;
-    z-index: 5;
     bottom: -20px;
     left: 0;
 
     padding-right: 27px;
 
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 70px;
+
+    z-index: 5;
     transition: color .2s linear;
 
     background: #fff;
@@ -3570,10 +3578,6 @@ aside
 
 .collections .grid .collection .sticker
 {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 28px;
-
     position: absolute;
     top: -14px;
     left: 100%;
@@ -3581,6 +3585,10 @@ aside
     height: 27px;
     margin-left: -20px;
     padding: 0 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
 
     white-space: nowrap;
 
@@ -3635,9 +3643,9 @@ aside
 
 .collections .grid .collection .desc
 {
-    font-size: 14px;
-
     margin-top: 20px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -3690,18 +3698,18 @@ aside
 
 .collections .row .collection .sticker
 {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 28px;
-
     position: absolute;
-    z-index: 3;
     top: -1px;
     left: -1px;
 
     height: 27px;
     padding: 0 10px;
 
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+
+    z-index: 3;
     white-space: nowrap;
 
     color: #fff;
@@ -3795,10 +3803,10 @@ aside
 
 .collections .row .collection .features
 {
+    margin-top: 8px;
+
     font-size: 14px;
     line-height: 24px;
-
-    margin-top: 8px;
 
     color: #606060;
 }
@@ -3811,12 +3819,12 @@ aside
 
 .collections .row .collection .price
 {
+    margin-top: 20px;
+    padding-top: 20px;
+
     font-size: 15px;
     font-weight: 700;
     line-height: 24px;
-
-    margin-top: 20px;
-    padding-top: 20px;
 
     white-space: nowrap;
 
@@ -3826,10 +3834,10 @@ aside
 
 .collections .row .collection .desc
 {
+    margin-top: 12px;
+
     font-size: 13px;
     line-height: 21px;
-
-    margin-top: 12px;
 
     color: #606060;
 }
@@ -3852,9 +3860,9 @@ aside
 --------------*/
 .products .head
 {
-    font-size: 14px;
-
     margin-bottom: 28px;
+
+    font-size: 14px;
 }
 
 
@@ -3943,11 +3951,11 @@ aside
 .products .tags a,
 .products .tags button
 {
-    font-size: 14px;
-
     display: block;
 
     padding: 8px 12px;
+
+    font-size: 14px;
 
     transition: .2s linear;
     text-decoration: none;
@@ -4062,18 +4070,18 @@ aside
 
 .products .product .sticker
 {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 28px;
-
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
     height: 27px;
     padding: 0 10px;
 
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
+
+    z-index: 3;
     white-space: nowrap;
 
     color: #fff;
@@ -4128,7 +4136,6 @@ aside
 .products .product .favorite_btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 0;
 
@@ -4141,6 +4148,7 @@ aside
     width: 42px;
     height: 43px;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #c8939d;
@@ -4183,7 +4191,6 @@ aside
 .products .product .remove_btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 0;
 
@@ -4196,6 +4203,7 @@ aside
     width: 44px;
     height: 47px;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #c8939d;
@@ -4268,8 +4276,6 @@ aside
 
 .products .product .features
 {
-    font-size: 14px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -4278,6 +4284,8 @@ aside
 
     margin-top: 16px;
     margin-left: -40px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -4311,11 +4319,11 @@ aside
 
 .products .product .price
 {
+    margin-right: auto;
+
     font-size: 15px;
     font-weight: 700;
     line-height: 24px;
-
-    margin-right: auto;
 }
 
 
@@ -4337,7 +4345,6 @@ aside
 .products .product .amount .btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -4350,6 +4357,7 @@ aside
     width: 31px;
     height: 40px;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #d8d8d8;
@@ -4384,15 +4392,15 @@ aside
 
 .products .product .amount .input
 {
-    font-family: var(--font_family);
-    font-size: var(--font_size);
-    font-weight: 300;
-
     display: block;
 
     width: 110px;
     height: 40px;
     padding: 0 31px;
+
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    font-weight: 300;
 
     text-align: center;
 
@@ -4404,12 +4412,12 @@ aside
 
 .products .product .amount .unit
 {
+    width: 40px;
+    height: 40px;
+
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
-
-    width: 40px;
-    height: 40px;
 
     text-align: center;
 
@@ -4420,12 +4428,12 @@ aside
 
 .products .product .amount .available
 {
+    width: 100%;
+    margin-top: 4px;
+
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
-
-    width: 100%;
-    margin-top: 4px;
 
     color: #606060;
 }
@@ -4512,12 +4520,12 @@ aside
 
 .products .product .not_available .btn
 {
+    margin-left: auto;
+    padding: 9px 19px;
+
     font-size: 13px;
     font-weight: 700;
     line-height: 22px;
-
-    margin-left: auto;
-    padding: 9px 19px;
 
     text-transform: uppercase;
 
@@ -4528,9 +4536,6 @@ aside
 
 .products .product .old_price
 {
-    font-size: 14px;
-    line-height: 24px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -4539,6 +4544,9 @@ aside
 
     width: 100%;
     margin-top: 4px;
+
+    font-size: 14px;
+    line-height: 24px;
 
     text-decoration: line-through;
 
@@ -4587,11 +4595,11 @@ aside
 
 .projects .tags a
 {
-    font-size: 14px;
-
     display: block;
 
     padding: 8px 12px;
+
+    font-size: 14px;
 
     transition: .2s linear;
     text-decoration: none;
@@ -4711,7 +4719,6 @@ aside
 .projects .project .images:after
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -4721,6 +4728,7 @@ aside
     height: 100%;
 
     content: '';
+    z-index: 3;
     transition: opacity .2s linear;
     pointer-events: none;
 
@@ -4779,8 +4787,6 @@ aside
 
 .projects .project .features
 {
-    line-height: 24px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -4788,6 +4794,8 @@ aside
     justify-content: center;
 
     margin-top: 12px;
+
+    line-height: 24px;
 
     color: #606060;
 }
@@ -4840,10 +4848,6 @@ aside
 
 .bottom_btns .btn
 {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 22px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -4852,6 +4856,10 @@ aside
 
     width: 50%;
     height: 140px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
 
     transition: background .2s linear;
     text-align: center;
@@ -4890,11 +4898,11 @@ aside
 -------------------*/
 .contacts_info .section .title
 {
+    margin-bottom: 28px;
+
     font-size: 30px;
     font-weight: 700;
     line-height: 45px;
-
-    margin-bottom: 28px;
 }
 
 
@@ -4914,25 +4922,25 @@ aside
 
 .contacts_info .label
 {
+    margin-bottom: 12px;
+
     font-size: 18px;
     font-weight: 700;
     line-height: 26px;
-
-    margin-bottom: 12px;
 }
 
 
 
 .contacts_info .location
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -4981,9 +4989,6 @@ aside
 
 .contacts_info .phone
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -4991,6 +4996,9 @@ aside
     justify-content: space-between;
 
     margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -5034,9 +5042,6 @@ aside
 
 .contacts_info .email
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -5044,6 +5049,9 @@ aside
     justify-content: space-between;
 
     margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -5087,9 +5095,6 @@ aside
 
 .contacts_info .time
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -5097,6 +5102,9 @@ aside
     justify-content: space-between;
 
     margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -5178,11 +5186,11 @@ aside
 
 .files .links a
 {
-    font-size: 14px;
-
     display: block;
 
     padding: 8px 13px;
+
+    font-size: 14px;
 
     transition: .2s linear;
     text-decoration: none;
@@ -5239,14 +5247,13 @@ aside
 .files .file .thumb div
 {
     position: absolute;
+    inset: 0;
 
     width: calc(100% - 28px);
     height: calc(100% - 28px);
     margin: auto;
 
     background: #ddd;
-
-    inset: 0;
 }
 
 
@@ -5276,9 +5283,9 @@ aside
 
 .files .file .info
 {
-    line-height: 24px;
-
     margin-top: 8px;
+
+    line-height: 24px;
 
     color: #606060;
 }
@@ -5306,14 +5313,14 @@ aside
 
 .files .file .btns .btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-decoration: none;
@@ -5421,9 +5428,6 @@ aside
 
 .partners_network .head .nice-select .current
 {
-    font-size: 14px;
-    line-height: 38px;
-
     position: relative;
 
     display: block;
@@ -5432,6 +5436,9 @@ aside
     height: 40px;
     padding-right: 33px;
     padding-left: 14px;
+
+    font-size: 14px;
+    line-height: 38px;
 
     cursor: pointer;
     white-space: nowrap;
@@ -5445,7 +5452,6 @@ aside
 .partners_network .head .nice-select-dropdown
 {
     position: absolute;
-    z-index: 9;
     top: 100%;
     left: 0;
 
@@ -5455,6 +5461,7 @@ aside
     min-width: 100%;
     margin-top: -1px;
 
+    z-index: 9;
     transition: .2s linear;
 
     opacity: 0;
@@ -5472,9 +5479,9 @@ aside
 
 .partners_network .head .nice-select .list .option
 {
-    font-size: 14px;
-
     padding: 8px 14px;
+
+    font-size: 14px;
 
     cursor: pointer;
     transition: background .2s linear;
@@ -5495,7 +5502,6 @@ aside
 .partners_network .head .nice-select + .arr
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 11px;
     bottom: 0;
@@ -5506,6 +5512,7 @@ aside
     height: 9px;
     margin: auto;
 
+    z-index: 3;
     transition: .2s linear;
     transform: rotate(-90deg);
     pointer-events: none;
@@ -5523,12 +5530,12 @@ aside
 
 .partners_network .head .join_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     height: 40px;
     margin-left: 50px;
     padding: 0 19px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: background .2s linear;
     text-transform: uppercase;
@@ -5695,17 +5702,17 @@ aside
 
 .articles .article .date
 {
-    font-size: 14px;
-    line-height: 25px;
-
     position: absolute;
-    z-index: 3;
     top: -1px;
     left: 49px;
 
     height: 24px;
     padding: 0 9px;
 
+    font-size: 14px;
+    line-height: 25px;
+
+    z-index: 3;
     transition: background .2s linear;
     white-space: nowrap;
 
@@ -5726,10 +5733,10 @@ aside
 
 .articles .article .desc
 {
+    margin-top: 28px;
+
     font-size: 16px;
     line-height: 28px;
-
-    margin-top: 28px;
 }
 
 
@@ -5831,10 +5838,10 @@ aside
 
 .about_stats .item .val
 {
+    margin-bottom: 28px;
+
     font-size: 100px;
     line-height: 70px;
-
-    margin-bottom: 28px;
 
     white-space: nowrap;
 
@@ -5858,11 +5865,11 @@ aside
 
 .contacts_block .title
 {
+    margin-bottom: 24px;
+
     font-size: 30px;
     font-weight: 700;
     line-height: 45px;
-
-    margin-bottom: 24px;
 }
 
 
@@ -5900,14 +5907,14 @@ aside
 
 .contacts_block .requisites .download a
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: .2s linear;
     text-decoration: none;
@@ -5947,9 +5954,9 @@ aside
 
 .contacts_block .requisites .text
 {
-    line-height: 28px;
-
     margin-top: 20px;
+
+    line-height: 28px;
 }
 
 
@@ -5972,14 +5979,14 @@ aside
 
 .contacts_block .shops .location
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -6028,9 +6035,6 @@ aside
 
 .contacts_block .shops .phone
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -6038,6 +6042,9 @@ aside
     justify-content: space-between;
 
     margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -6081,9 +6088,6 @@ aside
 
 .contacts_block .shops .email
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: flex-start;
     align-items: flex-start;
@@ -6091,6 +6095,9 @@ aside
     justify-content: space-between;
 
     margin-top: 16px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -6143,7 +6150,6 @@ aside
 .history .swiper:before
 {
     position: absolute;
-    z-index: 1;
     top: 132px;
     left: 50%;
 
@@ -6153,6 +6159,7 @@ aside
     height: 1px;
 
     content: '';
+    z-index: 1;
     transform: translateX(-50%);
 
     background: #ededed;
@@ -6162,10 +6169,10 @@ aside
 .history .swiper-slide
 {
     position: relative;
-    z-index: 3;
 
     visibility: hidden;
 
+    z-index: 3;
     transition: opacity .2s linear, visibility .2s linear;
     pointer-events: none;
 
@@ -6207,12 +6214,12 @@ aside
 
 .history .year
 {
-    font-size: 100px;
-    line-height: 72px;
-
     position: relative;
 
     margin-bottom: 110px;
+
+    font-size: 100px;
+    line-height: 72px;
 
     text-align: center;
     white-space: nowrap;
@@ -6301,7 +6308,6 @@ aside
 .awards .thumb .zoom
 {
     position: absolute;
-    z-index: 3;
     top: 9px;
     right: 9px;
 
@@ -6310,6 +6316,7 @@ aside
     width: 22px;
     height: 22px;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #c8929c;
@@ -6327,10 +6334,10 @@ aside
 
 .awards .item .name
 {
+    margin-top: 20px;
+
     font-weight: 500;
     line-height: 24px;
-
-    margin-top: 20px;
 }
 
 
@@ -6356,11 +6363,11 @@ aside
 -----------*/
 .logos .block_title
 {
+    margin-bottom: 30px;
+
     font-size: 40px;
     font-weight: 700;
     line-height: 60px;
-
-    margin-bottom: 30px;
 }
 
 
@@ -6490,12 +6497,12 @@ aside
 
 .catalog .head .type a
 {
-    font-size: 14px;
-    font-weight: 500;
-
     display: block;
 
     padding: 8px 17px;
+
+    font-size: 14px;
+    font-weight: 500;
 
     transition: .2s linear;
     text-decoration: none;
@@ -6536,10 +6543,10 @@ aside
 
 .catalog .head .limit .label
 {
-    font-size: 14px;
-
     margin: 0;
     padding: 9px 13px;
+
+    font-size: 14px;
 
     color: #606060;
     background: #ededed;
@@ -6575,9 +6582,6 @@ aside
 
 .catalog .head .nice-select .current
 {
-    font-size: 14px;
-    line-height: 38px;
-
     position: relative;
 
     display: block;
@@ -6586,6 +6590,9 @@ aside
     height: 40px;
     padding-right: 33px;
     padding-left: 14px;
+
+    font-size: 14px;
+    line-height: 38px;
 
     cursor: pointer;
     white-space: nowrap;
@@ -6599,7 +6606,6 @@ aside
 .catalog .head .nice-select-dropdown
 {
     position: absolute;
-    z-index: 9;
     top: 100%;
     left: 0;
 
@@ -6609,6 +6615,7 @@ aside
     min-width: 100%;
     margin-top: -1px;
 
+    z-index: 9;
     transition: .2s linear;
 
     opacity: 0;
@@ -6626,9 +6633,9 @@ aside
 
 .catalog .head .nice-select .list .option
 {
-    font-size: 14px;
-
     padding: 8px 14px;
+
+    font-size: 14px;
 
     cursor: pointer;
     transition: background .2s linear;
@@ -6649,7 +6656,6 @@ aside
 .catalog .head .nice-select + .arr
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 11px;
     bottom: 0;
@@ -6660,6 +6666,7 @@ aside
     height: 9px;
     margin: auto;
 
+    z-index: 3;
     transition: .2s linear;
     transform: rotate(-90deg);
     pointer-events: none;
@@ -6919,27 +6926,28 @@ aside
 .product_info .stickers
 {
     position: absolute;
-    z-index: 3;
     top: -1px;
     left: 201px;
 
     display: flex;
     flex-direction: column;
+
+    z-index: 3;
 }
 
 
 .product_info .sticker
 {
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 28px;
-
     position: relative;
 
     display: inline-block;
 
     height: 27px;
     padding: 0 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 28px;
 
     vertical-align: top;
     white-space: nowrap;
@@ -6996,7 +7004,6 @@ aside
 .product_info .favorite_btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     right: 0;
 
@@ -7009,6 +7016,7 @@ aside
     width: 42px;
     height: 43px;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #c8939d;
@@ -7091,10 +7099,10 @@ aside
 
 .product_info .info .price .val
 {
+    margin-top: 12px;
+
     font-size: 30px;
     font-weight: 700;
-
-    margin-top: 12px;
 
     white-space: nowrap;
 }
@@ -7190,15 +7198,15 @@ aside
 
 .product_info .features .spoler_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     position: relative;
 
     display: block;
 
     margin-top: 24px;
     padding-right: 16px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-transform: uppercase;
@@ -7236,12 +7244,12 @@ aside
 .product_info .params_btn,
 .product_info .products_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: block;
 
     margin-top: 16px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-transform: uppercase;
@@ -7269,11 +7277,11 @@ aside
 
 .product_info .buy .available
 {
+    margin-top: 4px;
+
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
-
-    margin-top: 4px;
 
     color: #606060;
 }
@@ -7294,12 +7302,12 @@ aside
 
 .product_info .buy .not_available .btn
 {
+    margin-top: 24px;
+    padding: 9px 19px;
+
     font-size: 13px;
     font-weight: 700;
     line-height: 22px;
-
-    margin-top: 24px;
-    padding: 9px 19px;
 
     text-transform: uppercase;
 
@@ -7321,10 +7329,10 @@ aside
 
 .product_info .buy .price .val
 {
+    margin-top: 12px;
+
     font-size: 30px;
     font-weight: 700;
-
-    margin-top: 12px;
 }
 
 
@@ -7385,10 +7393,10 @@ aside
 
 .product_info .buy .unit .exp
 {
-    font-size: 14px;
-
     width: 100%;
     margin-top: 20px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -7413,7 +7421,6 @@ aside
 .product_info .buy .amount .btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -7426,6 +7433,7 @@ aside
     width: 31px;
     height: 100%;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #d8d8d8;
@@ -7461,15 +7469,15 @@ aside
 
 .product_info .buy .amount .input
 {
-    font-family: var(--font_family);
-    font-size: var(--font_size);
-    font-weight: 300;
-
     display: block;
 
     width: 100%;
     height: 40px;
     padding: 0 31px;
+
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    font-weight: 300;
 
     text-align: center;
 
@@ -7481,9 +7489,6 @@ aside
 
 .product_info .buy .buy_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -7493,6 +7498,9 @@ aside
     width: 150px;
     height: 40px;
     margin: 28px auto 0;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: background .2s linear;
 
@@ -7696,7 +7704,6 @@ aside
 .gallery .item:after
 {
     position: absolute;
-    z-index: 2;
     top: 0;
     left: 0;
 
@@ -7706,6 +7713,7 @@ aside
     height: 100%;
 
     content: '';
+    z-index: 2;
     transition: opacity .2s linear;
 
     opacity: 0;
@@ -7716,7 +7724,6 @@ aside
 .gallery .item img
 {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
 
@@ -7725,6 +7732,8 @@ aside
     width: 100%;
     height: 100%;
 
+    z-index: 1;
+
     object-fit: cover;
 }
 
@@ -7732,7 +7741,7 @@ aside
 .gallery .item .icon
 {
     position: absolute;
-    z-index: 3;
+    inset: 0;
 
     display: flex;
     align-content: center;
@@ -7744,12 +7753,11 @@ aside
     height: 80px;
     margin: auto;
 
+    z-index: 3;
     transition: opacity .2s linear;
 
     opacity: 0;
     background: #f4004d;
-
-    inset: 0;
 }
 
 .gallery .item .icon svg
@@ -7849,11 +7857,11 @@ aside
 
 .cart_info .product .name
 {
-    font-size: 18px;
-    line-height: 26px;
-
     width: 264px;
     max-width: 100%;
+
+    font-size: 18px;
+    line-height: 26px;
 }
 
 
@@ -7876,9 +7884,9 @@ aside
 
 .cart_info .product .articul
 {
-    font-size: 14px;
-
     margin-top: 12px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -7908,7 +7916,6 @@ aside
 .cart_info .product .amount .btn
 {
     position: absolute;
-    z-index: 3;
     top: 0;
     left: 0;
 
@@ -7921,6 +7928,7 @@ aside
     width: 31px;
     height: 100%;
 
+    z-index: 3;
     transition: color .2s linear;
 
     color: #d8d8d8;
@@ -7956,15 +7964,15 @@ aside
 
 .cart_info .product .amount .input
 {
-    font-family: var(--font_family);
-    font-size: var(--font_size);
-    font-weight: 300;
-
     display: block;
 
     width: 100%;
     height: 40px;
     padding: 0 31px;
+
+    font-family: var(--font_family);
+    font-size: var(--font_size);
+    font-weight: 300;
 
     text-align: center;
 
@@ -8061,10 +8069,10 @@ aside
 
 .cart_info .product .unit .exp
 {
-    font-size: 14px;
-
     width: 100%;
     margin-top: 20px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -8163,9 +8171,6 @@ aside
 
 .cart_info .clear_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -8174,6 +8179,9 @@ aside
 
     margin-top: 18px;
     margin-left: auto;
+
+    font-size: 13px;
+    font-weight: 700;
 
     text-transform: uppercase;
 
@@ -8226,12 +8234,12 @@ aside
 
 .checkout_info .section .title
 {
+    margin-bottom: 35px;
+    padding-bottom: 11px;
+
     font-size: 30px;
     font-weight: 700;
     line-height: 40px;
-
-    margin-bottom: 35px;
-    padding-bottom: 11px;
 
     border-bottom: 1px solid;
 }
@@ -8255,9 +8263,9 @@ aside
 
 .checkout_info .entity_check .login_btn
 {
-    font-size: 15px;
-
     margin-left: 22px;
+
+    font-size: 15px;
 
     transition: color .2s linear;
 
@@ -8371,17 +8379,15 @@ aside
 
 .cart_total .price .val
 {
+    margin-top: 12px;
+
     font-size: 30px;
     font-weight: 700;
-
-    margin-top: 12px;
 }
 
 
 .cart_total .delivery_payment
 {
-    line-height: 24px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -8389,6 +8395,8 @@ aside
     justify-content: center;
 
     margin-top: 24px;
+
+    line-height: 24px;
 
     text-align: left;
 }
@@ -8422,9 +8430,9 @@ aside
 
 .cart_total .features
 {
-    font-size: 14px;
-
     margin-top: 30px;
+
+    font-size: 14px;
 
     color: #606060;
 }
@@ -8437,11 +8445,11 @@ aside
 
 .cart_total .checkout_btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     margin-top: 32px;
     padding: 9px 19px;
+
+    font-size: 13px;
+    font-weight: 700;
 
     color: #fff;
     background: #f4004d;
@@ -8479,12 +8487,12 @@ aside
 
 .lk_info .section .title
 {
+    margin-bottom: 35px;
+    padding-bottom: 11px;
+
     font-size: 30px;
     font-weight: 700;
     line-height: 40px;
-
-    margin-bottom: 35px;
-    padding-bottom: 11px;
 
     border-bottom: 1px solid;
 }
@@ -8512,9 +8520,6 @@ aside
 
 .lk_info .btns .btn
 {
-    font-size: 13px;
-    font-weight: 700;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -8522,6 +8527,9 @@ aside
     justify-content: space-between;
 
     width: 100%;
+
+    font-size: 13px;
+    font-weight: 700;
 
     transition: color .2s linear;
     text-align: left;
@@ -8610,9 +8618,6 @@ aside
 
 .lk_info .personal_discount
 {
-    font-size: 20px;
-    line-height: 24px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -8621,6 +8626,9 @@ aside
 
     margin-top: 102px;
     padding: 46px 38px;
+
+    font-size: 20px;
+    line-height: 24px;
 
     border: 2px solid #f4004d;
 }
@@ -8634,11 +8642,11 @@ aside
 
 .lk_info .personal_discount .val
 {
-    font-size: 54px;
-    font-weight: 700;
-
     width: 132px;
     max-width: 100%;
+
+    font-size: 54px;
+    font-weight: 700;
 }
 
 
@@ -8648,10 +8656,6 @@ aside
 ------------*/
 .orders .titles
 {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 26px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -8659,6 +8663,10 @@ aside
     justify-content: space-between;
 
     padding: 11px 29px 11px 18px;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 26px;
 
     border: 1px solid #ededed;
 }
@@ -8693,9 +8701,6 @@ aside
 
 .orders .order .head
 {
-    font-size: 14px;
-    font-weight: 500;
-
     position: relative;
 
     display: flex;
@@ -8705,6 +8710,9 @@ aside
     justify-content: space-between;
 
     padding: 14px 29px 14px 18px;
+
+    font-size: 14px;
+    font-weight: 500;
 
     cursor: pointer;
     transition: border-color .2s linear;
@@ -8796,10 +8804,10 @@ aside
 
 .orders .cart_info .product .amount
 {
+    width: 104px;
+
     font-size: 20px;
     line-height: 26px;
-
-    width: 104px;
 }
 
 
@@ -8935,9 +8943,9 @@ aside
 
 .shops_carousel .item .location
 {
-    line-height: 24px;
-
     margin-top: 12px;
+
+    line-height: 24px;
 
     color: #606060;
 }
@@ -8949,12 +8957,13 @@ aside
 ------------*/
 footer
 {
-    font-size: 14px;
-
     position: relative;
-    z-index: 3;
 
     padding: 60px 0 44px;
+
+    font-size: 14px;
+
+    z-index: 3;
 
     color: #606060;
     background: #f9f9f9;
@@ -8964,7 +8973,6 @@ footer
 footer .bg
 {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
 
@@ -8972,6 +8980,8 @@ footer .bg
 
     width: 100%;
     height: 100%;
+
+    z-index: 1;
 
     object-fit: cover;
 }
@@ -8985,9 +8995,10 @@ footer .bg.loaded
 footer .cont
 {
     position: relative;
-    z-index: 3;
 
     justify-content: space-between;
+
+    z-index: 3;
 }
 
 footer .cont + .cont
@@ -8999,11 +9010,11 @@ footer .cont + .cont
 
 footer .title
 {
+    margin-bottom: 20px;
+
     font-size: 20px;
     font-weight: 700;
     line-height: 28px;
-
-    margin-bottom: 20px;
 
     color: var(--text_color);
 }
@@ -9053,14 +9064,14 @@ footer .contacts
 
 footer .phone
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -9104,9 +9115,6 @@ footer .phone a
 
 footer .location
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -9114,6 +9122,9 @@ footer .location
     justify-content: space-between;
 
     margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -9173,10 +9184,10 @@ footer .socials
 
 footer .socials .title
 {
+    margin-bottom: 16px;
+
     font-size: var(--font_size);
     font-weight: 500;
-
-    margin-bottom: 16px;
 }
 
 
@@ -9230,9 +9241,6 @@ footer .socials .items a:hover
 
 footer .email
 {
-    font-size: 15px;
-    line-height: 19px;
-
     display: flex;
     align-content: center;
     align-items: center;
@@ -9240,6 +9248,9 @@ footer .email
     justify-content: space-between;
 
     margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 19px;
 }
 
 
@@ -9358,12 +9369,12 @@ footer .creator a:hover span
 
 .modal_title
 {
+    margin-bottom: 36px;
+    padding-bottom: 11px;
+
     font-size: 26px;
     font-weight: 700;
     line-height: 34px;
-
-    margin-bottom: 36px;
-    padding-bottom: 11px;
 
     border-bottom: 1px solid;
 }
@@ -9397,4 +9408,275 @@ footer .creator a:hover span
 .modal .btns .btn:hover
 {
     color: var(--text_color);
+}
+
+
+
+#location_modal
+{
+    padding: 60px;
+
+    text-align: center;
+}
+
+
+#location_modal .logo
+{
+    display: block;
+
+    width: 216px;
+    max-width: 100%;
+    margin: 0 auto 40px;
+}
+
+
+#location_modal .question
+{
+    margin-bottom: 28px;
+
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+#location_modal .btns
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+
+#location_modal .btns .btn
+{
+    width: 66px;
+    height: 40px;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 22px;
+
+    transition: .2s linear;
+    text-transform: uppercase;
+
+    color: #f4004d;
+    border: 1px solid #f4004d;
+}
+
+
+#location_modal .btns .btn + .btn
+{
+    margin-left: 20px;
+}
+
+
+#location_modal .btns .btn:hover,
+#location_modal .btns .btn.yes_btn
+{
+    color: #fff;
+    background: #f4004d;
+}
+
+
+
+#city_modal
+{
+    width: 1720px;
+    padding: 60px 100px;
+}
+
+
+#city_modal .logo
+{
+    display: block;
+
+    width: 216px;
+    max-width: 100%;
+    margin: 0 auto 36px;
+}
+
+
+#city_modal .region
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 40px;
+}
+
+
+#city_modal .region .title
+{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+}
+
+
+#city_modal .region .search
+{
+    width: 976px;
+    max-width: 100%;
+    margin-left: 95px;
+}
+
+
+#city_modal .region .search form
+{
+    position: relative;
+}
+
+
+#city_modal .region .search form ::-webkit-input-placeholder
+{
+    color: #606060;
+}
+
+#city_modal .region .search form :-moz-placeholder
+{
+    color: #606060;
+}
+
+#city_modal .region .search form ::-moz-placeholder
+{
+    opacity: 1;
+    color: #606060;
+}
+
+#city_modal .region .search form :-ms-input-placeholder
+{
+    color: #606060;
+}
+
+
+#city_modal .region .search .input
+{
+    display: block;
+
+    width: 100%;
+    height: 40px;
+    padding: 0 49px 0 15px;
+
+    font-family: var(--font_family);
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: .2s linear;
+
+    color: var(--text_color);
+    border: 1px solid #d8d8d8;
+    background: none;
+}
+
+
+#city_modal .region .search .submit_btn
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 45px;
+    height: 100%;
+
+    z-index: 3;
+    transition: color .2s linear;
+
+    color: #606060;
+}
+
+
+#city_modal .region .search .submit_btn .icon
+{
+    display: block;
+
+    width: 23px;
+    height: 23px;
+}
+
+
+#city_modal .region .search .submit_btn:hover
+{
+    color: #f4004d;
+}
+
+
+#city_modal .alphabet
+{
+    column-gap: 60px;
+    column-count: 5;
+}
+
+
+#city_modal .alphabet > *
+{
+    transform: translateZ(0);
+
+    --webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+#city_modal .alphabet > * + *
+{
+    margin-top: 32px;
+}
+
+
+#city_modal .alphabet .letter
+{
+    margin-bottom: 12px;
+
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+
+    color: #f4004d;
+}
+
+
+#city_modal .alphabet .items
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+#city_modal .alphabet .items > * + *
+{
+    margin-top: 8px;
+}
+
+
+#city_modal .alphabet .items a
+{
+    display: inline-block;
+
+    transition: color .2s linear;
+    vertical-align: top;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+#city_modal .alphabet .items a:hover,
+#city_modal .alphabet .items a.active
+{
+    color: #f4004d;
 }

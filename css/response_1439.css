@@ -40,9 +40,9 @@
     ----------------*/
     .pagination
     {
-        font-size: 16px;
-
         margin-top: 60px;
+
+        font-size: 16px;
     }
 
 
@@ -139,11 +139,11 @@
     ------------------*/
     .form .radio
     {
-        font-size: 14px;
-        line-height: 20px;
-
         min-height: 20px;
         padding-left: 30px;
+
+        font-size: 14px;
+        line-height: 20px;
     }
 
 
@@ -226,12 +226,12 @@
     .text_block blockquote,
     .text_block q
     {
-        font-size: 18px;
-        line-height: 30px;
-
         margin-top: 60px;
         margin-bottom: 60px;
         padding: 60px 200px 60px 100px;
+
+        font-size: 18px;
+        line-height: 30px;
     }
 
     .text_block blockquote:before,
@@ -262,10 +262,10 @@
 
     .main_slider .percents
     {
-        font-size: 140px;
-
         right: -32px;
         bottom: -20px;
+
+        font-size: 140px;
     }
 
 
@@ -393,10 +393,10 @@
     -------------------*/
     .contacts_info .label
     {
+        margin-bottom: 16px;
+
         font-size: 16px;
         line-height: 22px;
-
-        margin-bottom: 16px;
     }
 
 
@@ -466,9 +466,9 @@
 
     .product_info .features
     {
-        font-size: 15px;
-
         width: calc(50% - 12px);
+
+        font-size: 15px;
     }
 
     .product_info .features .item + .item,
@@ -586,9 +586,9 @@
 
     .about_stats .item .val
     {
-        font-size: 80px;
-
         margin-bottom: 20px;
+
+        font-size: 80px;
     }
 
 
@@ -647,13 +647,13 @@
 
     .articles .article .date
     {
-        font-size: 13px;
-        line-height: 24px;
-
         left: 40px;
 
         height: 24px;
         padding: 0 8px;
+
+        font-size: 13px;
+        line-height: 24px;
     }
 
 
@@ -666,10 +666,10 @@
 
     .articles .article .desc
     {
+        margin-top: 24px;
+
         font-size: 15px;
         line-height: 25px;
-
-        margin-top: 24px;
     }
 
 
@@ -750,10 +750,10 @@
 
     .cart_info .product .name
     {
+        width: 240px;
+
         font-size: 16px;
         line-height: 24px;
-
-        width: 240px;
     }
 
 
@@ -790,10 +790,10 @@
 
     .cart_info .product .unit label div
     {
-        font-size: 14px;
-
         min-width: 52px;
         padding: 5px;
+
+        font-size: 14px;
     }
 
 
@@ -814,10 +814,10 @@
     -------------------*/
     .checkout_info .section .title
     {
+        margin-bottom: 28px;
+
         font-size: 24px;
         line-height: 32px;
-
-        margin-bottom: 28px;
     }
 
 
@@ -838,10 +838,10 @@
     ------------*/
     .lk_info .section .title
     {
+        margin-bottom: 28px;
+
         font-size: 24px;
         line-height: 32px;
-
-        margin-bottom: 28px;
     }
 
 
@@ -933,5 +933,44 @@
     .shops_carousel .item .location
     {
         line-height: 20px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    #city_modal
+    {
+        padding: 60px 80px;
+    }
+
+
+    #city_modal .region .title
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+
+    #city_modal .region .search
+    {
+        width: calc(100% - 240px);
+    }
+
+
+    #city_modal .alphabet
+    {
+        column-gap: 48px;
+        column-count: 4;
+    }
+
+
+    #city_modal .alphabet .letter
+    {
+        margin-bottom: 8px;
+
+        font-size: 24px;
+        line-height: 30px;
     }
 }

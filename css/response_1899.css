@@ -43,14 +43,24 @@
 
 
 
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 40px;
+    }
+
+
+
     /*----------------
         Pagination
     ----------------*/
     .pagination
     {
-        font-size: 17px;
-
         margin-top: 68px;
+
+        font-size: 17px;
     }
 
 
@@ -140,9 +150,9 @@
 
     header .categories > * > a
     {
-        font-size: var(--font_size);
-
         min-height: 80px;
+
+        font-size: var(--font_size);
     }
 
 
@@ -228,18 +238,18 @@
     ----------------*/
     .text_block h2
     {
+        margin-bottom: 28px;
+
         font-size: 40px;
         line-height: calc(100% + 8px);
-
-        margin-bottom: 28px;
     }
 
     .text_block h3
     {
+        margin-bottom: 28px;
+
         font-size: 36px;
         line-height: calc(100% + 8px);
-
-        margin-bottom: 28px;
     }
 
     .text_block h4
@@ -290,12 +300,12 @@
     .text_block blockquote,
     .text_block q
     {
-        font-size: 19px;
-        line-height: 31px;
-
         margin-top: 80px;
         margin-bottom: 80px;
         padding: 67px 240px 67px 140px;
+
+        font-size: 19px;
+        line-height: 31px;
     }
 
     .text_block blockquote:before,
@@ -344,10 +354,10 @@
 
     .main_slider .desc
     {
-        line-height: 24px;
-
         width: 416px;
         margin-top: 16px;
+
+        line-height: 24px;
     }
 
 
@@ -392,24 +402,24 @@
 
     .collections .grid .collection .name
     {
-        font-size: 28px;
-        line-height: 60px;
-
         bottom: -20px;
 
         padding-right: 28px;
+
+        font-size: 28px;
+        line-height: 60px;
     }
 
     .collections .grid .collection .sticker
     {
-        font-size: 11px;
-        line-height: 23px;
-
         top: -12px;
 
         height: 22px;
         margin-left: -20px;
         padding: 0 8px;
+
+        font-size: 11px;
+        line-height: 23px;
     }
 
 
@@ -428,11 +438,11 @@
 
     .collections .row .collection .sticker
     {
-        font-size: 11px;
-        line-height: 23px;
-
         height: 22px;
         padding: 0 8px;
+
+        font-size: 11px;
+        line-height: 23px;
     }
 
 
@@ -462,11 +472,11 @@
 
     .products .product .sticker
     {
-        font-size: 11px;
-        line-height: 23px;
-
         height: 22px;
         padding: 0 8px;
+
+        font-size: 11px;
+        line-height: 23px;
     }
 
 
@@ -619,9 +629,9 @@
     -----------------*/
     .bottom_btns .btn
     {
-        font-size: 18px;
-
         height: 120px;
+
+        font-size: 18px;
     }
 
 
@@ -631,10 +641,10 @@
     -------------------*/
     .contacts_info .section .title
     {
+        margin-bottom: 24px;
+
         font-size: 26px;
         line-height: 40px;
-
-        margin-bottom: 24px;
     }
 
 
@@ -696,11 +706,11 @@
     ------------------*/
     .product_info .sticker
     {
-        font-size: 11px;
-        line-height: 23px;
-
         height: 22px;
         padding: 0 8px;
+
+        font-size: 11px;
+        line-height: 23px;
     }
 
 
@@ -848,10 +858,10 @@
     -----------*/
     .logos .block_title
     {
+        margin-bottom: 28px;
+
         font-size: 36px;
         line-height: calc(100% + 8px);
-
-        margin-bottom: 28px;
     }
 
 
@@ -904,10 +914,10 @@
 
     .cart_info .product .name
     {
+        width: 236px;
+
         font-size: 17px;
         line-height: 25px;
-
-        width: 236px;
     }
 
 
@@ -936,9 +946,9 @@
 
     .cart_info .product .unit .exp
     {
-        font-size: 13px;
-
         margin-top: 12px;
+
+        font-size: 13px;
     }
 
 
@@ -971,10 +981,10 @@
     -------------------*/
     .checkout_info .section .title
     {
+        margin-bottom: 32px;
+
         font-size: 26px;
         line-height: 34px;
-
-        margin-bottom: 32px;
     }
 
 
@@ -990,10 +1000,10 @@
     ------------*/
     .lk_info .section .title
     {
+        margin-bottom: 32px;
+
         font-size: 26px;
         line-height: 34px;
-
-        margin-bottom: 32px;
     }
 
 
@@ -1019,11 +1029,11 @@
 
     .lk_info .personal_discount
     {
-        font-size: 18px;
-        line-height: 22px;
-
         margin-top: 80px;
         padding: 36px 30px;
+
+        font-size: 18px;
+        line-height: 22px;
     }
 
     .lk_info .personal_discount .label
@@ -1033,9 +1043,9 @@
 
     .lk_info .personal_discount .val
     {
-        font-size: 44px;
-
         width: auto;
+
+        font-size: 44px;
     }
 
 
@@ -1124,4 +1134,9 @@
     /*-----------
         PopUp
     -----------*/
+    #city_modal .region .search
+    {
+        width: 868px;
+        margin-left: auto;
+    }
 }

@@ -17,9 +17,9 @@
     ----------------*/
     .pagination
     {
-        font-size: 15px;
-
         margin-top: 48px;
+
+        font-size: 15px;
     }
 
 
@@ -36,10 +36,10 @@
 
     .accordion_item .data
     {
+        margin-top: -4px;
+
         font-size: 14px;
         line-height: 22px;
-
-        margin-top: -4px;
     }
 
 
@@ -101,7 +101,6 @@
     header
     {
         position: fixed;
-        z-index: 101;
         top: 0;
         left: 0;
 
@@ -113,6 +112,7 @@
         margin: 0;
         padding: 0;
 
+        z-index: 101;
         transition: transform .3s linear;
         transform: translateX(-100%);
 
@@ -419,10 +419,10 @@
     .text_block blockquote,
     .text_block q
     {
+        padding: 40px 0 40px 40px;
+
         font-size: 17px;
         line-height: 27px;
-
-        padding: 40px 0 40px 40px;
     }
 
     .text_block blockquote:before,
@@ -452,19 +452,19 @@
 
     .main_slider .desc
     {
-        line-height: 21px;
-
         width: 376px;
         margin-top: 12px;
+
+        line-height: 21px;
     }
 
 
     .main_slider .percents
     {
-        font-size: 92px;
-
         right: -20px;
         bottom: -14px;
+
+        font-size: 92px;
     }
 
 
@@ -480,12 +480,12 @@
 
     .collections .grid .collection .name
     {
-        font-size: 22px;
-        line-height: 52px;
-
         bottom: -16px;
 
         padding-right: 24px;
+
+        font-size: 22px;
+        line-height: 52px;
     }
 
 
@@ -498,10 +498,10 @@
 
     .collections .row .collection .features
     {
+        margin-top: 12px;
+
         font-size: 13px;
         line-height: 19px;
-
-        margin-top: 12px;
     }
 
     .collections .row .collection .features > * + *
@@ -573,10 +573,10 @@
     -------------------*/
     .contacts_info .section .title
     {
+        margin-bottom: 28px;
+
         font-size: 24px;
         line-height: 32px;
-
-        margin-bottom: 28px;
     }
 
 
@@ -710,9 +710,9 @@
 
     .catalog .head .type a
     {
-        font-size: 13px;
-
         padding: 8px 16px;
+
+        font-size: 13px;
     }
 
 
@@ -878,11 +878,11 @@
     ------------*/
     .lk_info .personal_discount
     {
-        font-size: 16px;
-        line-height: 22px;
-
         width: 280px;
         padding: 30px 26px;
+
+        font-size: 16px;
+        line-height: 22px;
     }
 
     .lk_info .personal_discount .val
@@ -972,10 +972,50 @@
 
     .modal_title
     {
-        font-size: 25px;
-        line-height: 31px;
-
         margin-bottom: 32px;
         padding-bottom: 7px;
+
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+
+
+    #city_modal
+    {
+        padding: 40px 48px;
+    }
+
+
+    #city_modal .region .title
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+    #city_modal .region .search
+    {
+        width: calc(100% - 200px);
+    }
+
+
+    #city_modal .alphabet
+    {
+        column-count: 2;
+    }
+
+
+    #city_modal .alphabet .letter
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+
+    #location_modal
+    {
+        padding: 40px 48px;
     }
 }

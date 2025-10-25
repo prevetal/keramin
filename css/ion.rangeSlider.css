@@ -53,7 +53,6 @@
 
 .irs-slider
 {
-    z-index: 9;
     top: -5px;
 
     display: block;
@@ -61,6 +60,7 @@
     width: 12px;
     height: 12px;
 
+    z-index: 9;
     cursor: pointer;
 
     background: #f4004d;
@@ -154,9 +154,10 @@
 .irs-slider
 {
     position: absolute;
-    z-index: 1;
 
     display: block;
+
+    z-index: 1;
 }
 
 
@@ -240,7 +241,6 @@
 .irs-disable-mask
 {
     position: absolute;
-    z-index: 2;
     top: 0;
     left: -1%;
 
@@ -249,6 +249,7 @@
     width: 102%;
     height: 100%;
 
+    z-index: 2;
     cursor: default;
 
     background: rgba(0, 0, 0, .0);
@@ -271,11 +272,7 @@
 
 .irs-hidden-input
 {
-    font-size: 0 !important;
-    line-height: 0 !important;
-
     position: absolute !important;
-    z-index: -9999 !important;
     top: 0 !important;
     left: 0 !important;
 
@@ -286,6 +283,11 @@
     height: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
+
+    font-size: 0 !important;
+    line-height: 0 !important;
+
+    z-index: -9999 !important;
 
     border-style: solid !important;
     border-color: transparent !important;

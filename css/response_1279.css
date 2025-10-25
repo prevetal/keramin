@@ -134,9 +134,9 @@
 
     .text_block .big
     {
-        font-size: 18px;
-
         padding: 0;
+
+        font-size: 18px;
     }
 
 
@@ -220,10 +220,10 @@
 
     .main_slider .percents
     {
-        font-size: 120px;
-
         right: -28px;
         bottom: -20px;
+
+        font-size: 120px;
     }
 
 
@@ -311,10 +311,10 @@
     .products .product .price,
     .products .row .product .price
     {
+        width: auto;
+
         font-size: 14px;
         line-height: 20px;
-
-        width: auto;
     }
 
 
@@ -398,9 +398,9 @@
     -----------------*/
     .bottom_btns .btn
     {
-        font-size: 17px;
-
         height: 100px;
+
+        font-size: 17px;
     }
 
 
@@ -479,9 +479,9 @@
 
     .product_info .info .price .val
     {
-        font-size: 28px;
-
         margin-top: 8px;
+
+        font-size: 28px;
     }
 
 
@@ -497,10 +497,10 @@
 
     .history .year
     {
+        margin-bottom: 80px;
+
         font-size: 72px;
         line-height: 100%;
-
-        margin-bottom: 80px;
     }
 
     .history .year:after
@@ -533,10 +533,10 @@
 
     .about_stats .item .val
     {
+        margin-bottom: 8px;
+
         font-size: 72px;
         line-height: 100%;
-
-        margin-bottom: 8px;
     }
 
 
@@ -700,10 +700,10 @@
     ------------*/
     .lk_info .personal_discount
     {
+        width: 304px;
+
         font-size: 17px;
         line-height: 21px;
-
-        width: 304px;
     }
 
     .lk_info .personal_discount .val
@@ -748,9 +748,9 @@
 
     .shops_carousel .item .location
     {
-        font-size: 14px;
-
         margin-top: 8px;
+
+        font-size: 14px;
     }
 
 
@@ -831,5 +831,42 @@
     footer .privacy_policy_link
     {
         margin-left: auto;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    #city_modal
+    {
+        padding: 48px 60px;
+    }
+
+
+    #city_modal .region .title
+    {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+
+    #city_modal .region .search
+    {
+        width: calc(100% - 220px);
+    }
+
+
+    #city_modal .alphabet
+    {
+        column-gap: 40px;
+        column-count: 3;
+    }
+
+
+    #city_modal .alphabet .letter
+    {
+        font-size: 22px;
+        line-height: 28px;
     }
 }
