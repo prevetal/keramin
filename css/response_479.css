@@ -682,6 +682,44 @@
 
 
 
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .categories
+    {
+        gap: 8px;
+    }
+
+
+    .compare_info .categories a
+    {
+        padding: 2px 2px 2px 12px;
+
+        font-size: 11px;
+    }
+
+
+    .compare_info .categories .count
+    {
+        font-size: 13px;
+    }
+
+
+    .compare_info .categories .delete_btn
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+    .compare_info .btns
+    {
+        width: 100%;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

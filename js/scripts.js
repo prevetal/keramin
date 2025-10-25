@@ -41,7 +41,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Карусель товаров
 	const productsSliders = [],
-		products = document.querySelectorAll('.products .swiper')
+		productThumbsSliders = [],
+		products = document.querySelectorAll('.products .swiper.main'),
+		productThumbs = document.querySelectorAll('.products .product .swiper.images')
+
+	productThumbs.forEach(function (el, i) {
+		el.classList.add('product_thumbs_s' + i)
+
+		let options = {
+			loop: true,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			nested: true,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 0,
+			slidesPerView: 1
+		}
+
+		productThumbsSliders.push(new Swiper('.product_thumbs_s' + i, options))
+	})
 
 	products.forEach(function (el, i) {
 		el.classList.add('products_s' + i)
@@ -530,8 +555,62 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 
 
+	// Сравнение
+	let compareSlider = document.querySelector('.compare_info .swiper')
+
+	if (compareSlider) {
+		new Swiper('.compare_info .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			preloadImages: false,
+			lazy: {
+				enabled: true,
+				checkInView: true,
+				loadOnTransitionStart: true,
+				loadPrevNext: true
+			},
+			breakpoints: {
+				0: {
+					spaceBetween: 24,
+					slidesPerView: 'auto'
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1280: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1900: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			},
+			on: {
+				resize: swiper => setTimeout(() => compareHeight($(swiper.el)))
+			}
+		})
+	}
+
+
 	// Товар в избранное
 	$('.product .favorite_btn, .product_info .favorite_btn').click(function(e) {
+		e.preventDefault()
+
+		$(this).toggleClass('active')
+	})
+
+
+	// Товар в сравнение
+	$('.product .compare_btn, .product_info .compare_btn').click(function(e) {
 		e.preventDefault()
 
 		$(this).toggleClass('active')
@@ -1112,5 +1191,48 @@ function productsHeight(context, step) {
 		start = start + step
 		finish = finish + step
 		i++
+	})
+}
+
+
+
+// Compare height
+function compareHeight(slider) {
+	$('.compare_info .features > *').height('auto')
+
+	let productFeatures = slider.find('.features'),
+		compareFeatures = $('.compare_info .col_left .features > *'),
+		sizes = new Object()
+
+	compareFeatures.each(function () {
+		if (sizes[$(this).index()]) {
+			if ($(this).outerHeight() > sizes[$(this).index()]) {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		} else {
+			sizes[$(this).index()] = $(this).outerHeight()
+		}
+	})
+
+	productFeatures.each(function () {
+		$(this).find('> *').each(function () {
+			if (sizes[$(this).index()]) {
+				if ($(this).outerHeight() > sizes[$(this).index()]) {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			} else {
+				sizes[$(this).index()] = $(this).outerHeight()
+			}
+		})
+	})
+
+	compareFeatures.each(function(index) {
+		$(this).innerHeight(sizes[index])
+	})
+
+	productFeatures.each(function() {
+		$(this).find('> *').each(function(index) {
+			$(this).innerHeight(sizes[index])
+		})
 	})
 }

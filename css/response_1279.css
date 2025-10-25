@@ -45,7 +45,7 @@
 
     header .search
     {
-        width: calc(100% - 524px);
+        width: calc(100% - 560px);
     }
 
 
@@ -104,6 +104,19 @@
     {
         width: calc(100% - 548px);
         margin-left: 40px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title .count
+    {
+        margin-top: 4px;
+        margin-left: 10px;
+
+        font-size: 28px;
     }
 
 
@@ -751,6 +764,50 @@
         margin-top: 8px;
 
         font-size: 14px;
+    }
+
+
+
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .categories
+    {
+        margin-bottom: 24px;
+
+        gap: 12px;
+    }
+
+
+    .compare_info .categories a
+    {
+        padding-left: 12px;
+    }
+
+
+
+    .compare_info .col_left
+    {
+        width: 300px;
+    }
+
+
+    .compare_info .col_main
+    {
+        width: calc(100% - 300px);
+    }
+
+
+
+    .compare_info .btns
+    {
+        gap: 12px;
+    }
+
+
+    .compare_info .btns .btn
+    {
+        height: 40px;
     }
 
 

@@ -941,6 +941,62 @@
 
 
 
+    /*------------------
+        Compare info
+    ------------------*/
+    .compare_info .categories a
+    {
+        font-size: 12px;
+
+        gap: 8px;
+    }
+
+
+
+    .compare_info .col_left
+    {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+
+    .compare_info .col_left .features
+    {
+        display: none;
+    }
+
+
+    .compare_info .col_main
+    {
+        width: 100%;
+    }
+
+
+    .compare_info .product .features > *
+    {
+        width: calc(100% + 48px);
+        margin-inline: -24px;
+        padding-inline: 24px;
+    }
+
+
+    .compare_info .product .features > *:before
+    {
+        display: block;
+
+        margin-bottom: 4px;
+
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1;
+
+        content: attr(data-label);
+
+        opacity: .6;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
