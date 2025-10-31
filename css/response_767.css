@@ -1157,7 +1157,7 @@
     /*------------------
         Compare info
     ------------------*/
-    .compare_info .swiper-slide
+    .compare_info .desktop .swiper-slide
     {
         width: 284px;
     }

@@ -569,11 +569,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Сравнение
-	let compareHeadSlider = document.querySelector('.compare_info .head .swiper'),
-		compareBottomSlider = document.querySelector('.compare_info .bottom .swiper')
+	let compareTopSlider = document.querySelector('.compare_info .desktop .top .swiper'),
+		compareBottomSlider = document.querySelector('.compare_info .desktop .bottom .swiper'),
+		compareMobileTopSlider = document.querySelectorAll('.compare_info .mobile .top .swiper'),
+		compareMobileBottomSlider = document.querySelectorAll('.compare_info .mobile .bottom .swiper'),
+		compareMobileTopSliders = [],
+		compareMobileBottomSliders = []
 
-	if (compareHeadSlider && compareBottomSlider) {
-		const compareHeadSlider = new Swiper('.compare_info .head .swiper', {
+	if (compareTopSlider && compareBottomSlider) {
+		const compareTopSlider = new Swiper('.compare_info .desktop .top .swiper', {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -610,7 +614,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		})
 
-		const compareBottomSlider = new Swiper('.compare_info .bottom .swiper', {
+		const compareBottomSlider = new Swiper('.compare_info .desktop .bottom .swiper', {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -633,11 +637,63 @@ document.addEventListener('DOMContentLoaded', function () {
 					spaceBetween: 30,
 					slidesPerView: 4
 				}
+			},
+			on: {
+				resize: swiper => setTimeout(() => compareHeight($(swiper.el)))
 			}
 		})
 
-		compareHeadSlider.controller.control = compareBottomSlider
-		compareBottomSlider.controller.control = compareHeadSlider
+		compareTopSlider.controller.control = compareBottomSlider
+		compareBottomSlider.controller.control = compareTopSlider
+	}
+
+
+	if (compareMobileTopSlider && compareMobileBottomSlider) {
+		compareMobileTopSlider.forEach(function (el, i) {
+			el.classList.add('compare_mobile_top_s' + i)
+
+			let options = {
+				loop: true,
+				loopedSlides: el.querySelectorAll('.swiper-slide').length,
+				speed: 500,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1
+			}
+
+			compareMobileTopSliders.push(new Swiper('.compare_mobile_top_s' + i, options))
+		})
+
+		compareMobileBottomSlider.forEach(function (el, i) {
+			el.classList.add('compare_mobile_bottom_s' + i)
+
+			let options = {
+				loop: true,
+				loopedSlides: el.querySelectorAll('.swiper-slide').length,
+				speed: 500,
+				watchSlidesProgress: true,
+				slideActiveClass: 'active',
+				slideVisibleClass: 'visible',
+				spaceBetween: 0,
+				slidesPerView: 1,
+				on: {
+					resize: swiper => setTimeout(() => compareMobileHeight($(swiper.el)))
+				}
+			}
+
+			compareMobileBottomSliders.push(new Swiper('.compare_mobile_bottom_s' + i, options))
+		})
+
+		compareMobileTopSliders.forEach((topSwiper, i) => {
+			const bottomSwiper = compareMobileBottomSliders[i]
+
+			if (bottomSwiper) {
+				topSwiper.controller.control = bottomSwiper
+				bottomSwiper.controller.control = topSwiper
+			}
+		})
 	}
 
 
@@ -1151,20 +1207,37 @@ window.addEventListener('load', function () {
 
 
 window.addEventListener('scroll', function () {
-	// Фикс. шапка
-	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
-		? $('header').addClass('fixed')
-		: $('header').removeClass('fixed')
+	if (typeof headerInit !== 'undefined' && headerInit) {
+        const header = $('header')
+
+        if ($(window).scrollTop() > headerHeight) {
+            header.addClass('fixed')
+
+            headerHeight = header.outerHeight()
+
+            $('.compare_info .desktop .top').css('top', headerHeight + 'px')
+        } else {
+            header.removeClass('fixed')
+
+            $('.compare_info .desktop .top').css('top', 0)
+        }
+    }
 
 
 	// Фикс верхней части страницы сравнения
-	const compareHead = document.querySelector('.compare_info .head')
+	const compareHead = document.querySelector('.compare_info .desktop .top'),
+		compareMobileHead = document.querySelector('.compare_info .mobile .top')
 
-	const rect = compareHead.getBoundingClientRect()
+	const rect = compareHead.getBoundingClientRect(),
+		rectMob = compareMobileHead.getBoundingClientRect()
 
 	rect.top <= $('header.fixed .data').outerHeight()
 		? compareHead.classList.add('is-stuck')
 		: compareHead.classList.remove('is-stuck')
+
+	rectMob.top <= 0
+		? compareMobileHead.classList.add('is-stuck')
+		: compareMobileHead.classList.remove('is-stuck')
 })
 
 
@@ -1248,10 +1321,10 @@ function productsHeight(context, step) {
 
 // Compare height
 function compareHeight(slider) {
-	$('.compare_info .features > *').height('auto')
+	$('.compare_info .desktop .bottom .features > *').height('auto')
 
 	let productFeatures = slider.find('.features'),
-		compareFeatures = $('.compare_info .col_left .features > *'),
+		compareFeatures = $('.compare_info .desktop .bottom .col_left .features > *'),
 		sizes = new Object()
 
 	compareFeatures.each(function () {
@@ -1285,4 +1358,37 @@ function compareHeight(slider) {
 			$(this).innerHeight(sizes[index])
 		})
 	})
+}
+
+
+function compareMobileHeight() {
+    $('.compare_info .mobile .bottom .features > *').height('auto')
+
+	let sizes = new Object()
+
+    $('.compare_info .mobile .bottom .swiper').each(function() {
+        const features = $(this).find('.features')
+
+        features.each(function () {
+			$(this).find('> *').each(function () {
+				if (sizes[$(this).index()]) {
+					if ($(this).outerHeight() > sizes[$(this).index()]) {
+						sizes[$(this).index()] = $(this).outerHeight()
+					}
+				} else {
+					sizes[$(this).index()] = $(this).outerHeight()
+				}
+			})
+		})
+    })
+
+    $('.compare_info .mobile .bottom .swiper').each(function() {
+        const features = $(this).find('.features')
+
+        features.each(function () {
+			$(this).find('> *').each(function(index) {
+				$(this).innerHeight(sizes[index])
+			})
+		})
+    });
 }

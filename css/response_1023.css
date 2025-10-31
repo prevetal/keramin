@@ -953,30 +953,24 @@
 
 
 
-    .compare_info .col_left
-    {
-        width: 100%;
-        margin-bottom: 24px;
-    }
-
-
-    .compare_info .col_left .features
+    .compare_info .desktop
     {
         display: none;
     }
 
 
-    .compare_info .col_main
+    .compare_info .mobile
     {
-        width: 100%;
+        display: block;
     }
+
 
 
     .compare_info .product .features > *
     {
-        width: calc(100% + 48px);
-        margin-inline: -24px;
-        padding-inline: 24px;
+        width: 100%;
+        margin-inline: 0;
+        padding-inline: 0;
     }
 
 
@@ -984,6 +978,7 @@
     {
         display: block;
 
+        width: 100%;
         margin-bottom: 4px;
 
         font-size: 12px;
