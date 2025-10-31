@@ -62,7 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
 				bulletActiveClass: 'active'
 			},
 			spaceBetween: 0,
-			slidesPerView: 1
+			slidesPerView: 1,
+			on: {
+				init(swiper) {
+					const customPagination = $(swiper.el).find('.swiper-custom-pagination')
+
+					for (let i = 0; i < (this.slides.length - 2); i++) {
+						const span = $('<span>')
+						.addClass('custom-bullet')
+						.on('mouseover', () => this.slideToLoop(i))
+
+						customPagination.append(span)
+					}
+				}
+			}
 		}
 
 		productThumbsSliders.push(new Swiper('.product_thumbs_s' + i, options))
@@ -556,10 +569,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Сравнение
-	let compareSlider = document.querySelector('.compare_info .swiper')
+	let compareHeadSlider = document.querySelector('.compare_info .head .swiper'),
+		compareBottomSlider = document.querySelector('.compare_info .bottom .swiper')
 
-	if (compareSlider) {
-		new Swiper('.compare_info .swiper', {
+	if (compareHeadSlider && compareBottomSlider) {
+		const compareHeadSlider = new Swiper('.compare_info .head .swiper', {
 			loop: false,
 			speed: 500,
 			watchSlidesProgress: true,
@@ -578,8 +592,8 @@ document.addEventListener('DOMContentLoaded', function () {
 			},
 			breakpoints: {
 				0: {
-					spaceBetween: 24,
-					slidesPerView: 'auto'
+					spaceBetween: 8,
+					slidesPerView: 2
 				},
 				768: {
 					spaceBetween: 24,
@@ -593,11 +607,37 @@ document.addEventListener('DOMContentLoaded', function () {
 					spaceBetween: 30,
 					slidesPerView: 4
 				}
-			},
-			on: {
-				resize: swiper => setTimeout(() => compareHeight($(swiper.el)))
 			}
 		})
+
+		const compareBottomSlider = new Swiper('.compare_info .bottom .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			breakpoints: {
+				0: {
+					spaceBetween: 8,
+					slidesPerView: 2
+				},
+				768: {
+					spaceBetween: 24,
+					slidesPerView: 2
+				},
+				1280: {
+					spaceBetween: 24,
+					slidesPerView: 3
+				},
+				1900: {
+					spaceBetween: 30,
+					slidesPerView: 4
+				}
+			}
+		})
+
+		compareHeadSlider.controller.control = compareBottomSlider
+		compareBottomSlider.controller.control = compareHeadSlider
 	}
 
 
@@ -1115,6 +1155,16 @@ window.addEventListener('scroll', function () {
 	typeof headerInit !== 'undefined' && headerInit && $(window).scrollTop() > headerHeight
 		? $('header').addClass('fixed')
 		: $('header').removeClass('fixed')
+
+
+	// Фикс верхней части страницы сравнения
+	const compareHead = document.querySelector('.compare_info .head')
+
+	const rect = compareHead.getBoundingClientRect()
+
+	rect.top <= $('header.fixed .data').outerHeight()
+		? compareHead.classList.add('is-stuck')
+		: compareHead.classList.remove('is-stuck')
 })
 
 

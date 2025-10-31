@@ -685,6 +685,13 @@
     /*------------------
         Compare info
     ------------------*/
+    .compare_info .cont
+    {
+        padding-inline: 8px;
+    }
+
+
+
     .compare_info .categories
     {
         gap: 8px;
@@ -716,6 +723,15 @@
     .compare_info .btns
     {
         width: 100%;
+    }
+
+
+
+    .compare_info .product .features > *
+    {
+        width: calc(100% + 8px);
+        margin-left: -8px;
+        padding-inline: 8px 0;
     }
 
 

@@ -294,6 +294,12 @@
     }
 
 
+    .products .swiper-custom-pagination
+    {
+        display: none;
+    }
+
+
     .products .product .sticker
     {
         font-size: 10px;
