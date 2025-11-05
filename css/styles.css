@@ -9326,7 +9326,6 @@ aside
     height: 100%;
 
     content: '';
-    z-index: -1;
     transform: translateX(-50%);
 
     background: #fff;
