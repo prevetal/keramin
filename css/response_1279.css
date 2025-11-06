@@ -313,6 +313,12 @@
     }
 
 
+    .products .product .images .swiper-pagination
+    {
+        opacity: 1;
+    }
+
+
     .products .product .name
     {
         font-size: 16px;

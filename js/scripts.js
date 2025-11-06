@@ -1193,21 +1193,23 @@ window.addEventListener('load', function () {
 
 
 	// Фикс. шапка
-	headerInit   = true,
-	headerHeight = $('header').outerHeight()
+	if (!$('header').hasClass('no_fixed')) {
+		headerInit   = true,
+		headerHeight = $('header').outerHeight()
 
-	$('header').wrap('<div class="header_wrap"></div>')
-	$('.header_wrap').height(headerHeight)
+		$('header').wrap('<div class="header_wrap"></div>')
+		$('.header_wrap').height(headerHeight)
 
-	headerInit && $(window).scrollTop() > headerHeight
-		? $('header').addClass('fixed')
-		: $('header').removeClass('fixed')
+		headerInit && $(window).scrollTop() > headerHeight
+			? $('header').addClass('fixed')
+			: $('header').removeClass('fixed')
+	}
 })
 
 
 
 window.addEventListener('scroll', function () {
-	if (typeof headerInit !== 'undefined' && headerInit) {
+	if (typeof headerInit !== 'undefined' && headerInit && !$('header').hasClass('no_fixed')) {
         const header = $('header')
 
         if ($(window).scrollTop() > headerHeight) {
@@ -1231,7 +1233,7 @@ window.addEventListener('scroll', function () {
 	const rect = compareHead.getBoundingClientRect(),
 		rectMob = compareMobileHead.getBoundingClientRect()
 
-	rect.top <= $('header.fixed .data').outerHeight()
+	rect.top <= 0
 		? compareHead.classList.add('is-stuck')
 		: compareHead.classList.remove('is-stuck')
 
@@ -1260,19 +1262,21 @@ window.addEventListener('resize', function () {
 
 
 		// Фикс. шапка
-		headerInit = false
-		$('.header_wrap').height('auto')
+		if (!$('header').hasClass('no_fixed')) {
+			headerInit = false
+			$('.header_wrap').height('auto')
 
-		setTimeout(() => {
-			headerInit   = true
-			headerHeight = $('header').outerHeight()
+			setTimeout(() => {
+				headerInit   = true
+				headerHeight = $('header').outerHeight()
 
-			$('.header_wrap').height(headerHeight)
+				$('.header_wrap').height(headerHeight)
 
-			headerInit && $(window).scrollTop() > headerHeight
-				? $('header').addClass('fixed')
-				: $('header').removeClass('fixed')
-		}, 100)
+				headerInit && $(window).scrollTop() > headerHeight
+					? $('header').addClass('fixed')
+					: $('header').removeClass('fixed')
+			}, 100)
+		}
 
 
 		// Моб. версия
