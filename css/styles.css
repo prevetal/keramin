@@ -9215,6 +9215,8 @@ aside
 
 .compare_info .categories .delete_btn
 {
+    position: relative;
+
     display: flex;
     align-content: center;
     align-items: center;
@@ -9272,6 +9274,12 @@ aside
 }
 
 
+.compare_info .mobile .top
+{
+    padding-bottom: 13px;
+}
+
+
 .compare_info .mobile .cols
 {
     display: flex;
@@ -9288,10 +9296,71 @@ aside
 }
 
 
+.compare_info .mobile .controls
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 9px 15px;
+}
+
+
+.compare_info .mobile .controls .swiper-button-next,
+.compare_info .mobile .controls .swiper-button-prev
+{
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+    margin: 0;
+
+    color: #d8d8d8;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+
+.compare_info .mobile .controls .swiper-button-prev
+{
+    left: 0;
+}
+
+
+.compare_info .mobile .controls .swiper-button-next
+{
+    right: 0;
+}
+
+
+.compare_info .mobile .controls .swiper-button-next .icon,
+.compare_info .mobile .controls .swiper-button-prev .icon
+{
+    width: 7px;
+    height: 13px;
+}
+
+
+.compare_info .mobile .controls .swiper-pagination
+{
+    font-size: 12px;
+
+    color: #111;
+}
+
+
 .compare_info .mobile .product .info
 {
     margin-right: 12px;
     margin-left: 24px;
+    padding-bottom: 57px;
 }
 
 
@@ -9517,6 +9586,8 @@ aside
 
 .compare_info .product
 {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -9562,6 +9633,12 @@ aside
     width: 41px;
 
     aspect-ratio: 1/1;
+}
+
+
+.compare_info .mobile .product .thumb
+{
+    width: 100%;
 }
 
 
@@ -9700,6 +9777,13 @@ aside
 .compare_info .product .amount .btn.plus
 {
     left: 71px;
+}
+
+
+.compare_info .mobile .product .amount .btn.plus
+{
+    right: 40px;
+    left: auto;
 }
 
 
@@ -9915,17 +9999,27 @@ aside
 
 
 
+.compare_info .mobile .product:hover .info
+{
+    border-color: #ededed;
+}
+
+
 .compare_info .mobile .product .name
 {
-    width: calc(100% - 48px);
+    width: 100%;
+
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 114%;
 }
 
 
 .compare_info .mobile .product .price
 {
-    margin-top: 4px;
+    margin-top: 8px;
 
-    font-size: 14px;
+    font-size: 13px;
 }
 
 
@@ -9966,22 +10060,92 @@ aside
 .compare_info .mobile .product .buy
 {
     padding-inline: 4px;
+
+    gap: 4px;
 }
 
 
 .compare_info .mobile .product .favorite_btn
 {
+    margin-right: 0;
     margin-left: 0;
 }
 
+
 .compare_info .mobile .product .buy_btn
 {
-    width: calc(100% - 82px);
+    width: calc(100% - 36px);
+
+    font-size: 11px;
+
+    gap: 10px;
 }
+
+.compare_info .mobile .product .buy_btn .icon
+{
+    width: 21px;
+    height: 20px;
+}
+
 
 .compare_info .mobile .product .remove_btn
 {
-    margin-left: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+
+    border-radius: 50%;
+    background: #fff;
+}
+
+
+.compare_info .mobile .product .remove_btn .icon
+{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.compare_info .mobile .top.is-stuck .product
+{
+    height: auto !important;
+}
+
+
+.compare_info .mobile .top.is-stuck .product .thumb
+{
+    width: 48px;
+}
+
+
+.compare_info .mobile .top.is-stuck .product .name
+{
+    align-self: center;
+
+    width: calc(100% - 55px);
+}
+
+
+.compare_info .mobile .top.is-stuck .product .buy_btn
+{
+    width: calc(100% - 64px);
+}
+
+
+.compare_info .mobile .top.is-stuck .product .remove_btn
+{
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 0;
+    background: none;
 }
 
 

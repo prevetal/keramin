@@ -797,6 +797,22 @@
     }
 
 
+    .compare_info .categories .delete_btn:before
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: 48px;
+        height: 48px;
+
+        content: '';
+        transform: translate(-50%,-50%);
+    }
+
+
 
     .compare_info .col_left
     {
@@ -820,6 +836,106 @@
     .compare_info .btns .btn
     {
         height: 40px;
+    }
+
+
+    .compare_info .mobile .product .remove_btn:before
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        display: block;
+
+        width: 48px;
+        height: 48px;
+
+        content: '';
+    }
+
+
+    .compare_info .mobile .top.is-stuck .product .remove_btn:before
+    {
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%,-50%);
+    }
+
+
+    .compare_info .mobile .product .buy_btn
+    {
+        position: relative;
+    }
+
+
+    .compare_info .mobile .product .buy_btn:before
+    {
+        position: absolute;
+        top: 50%;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: 48px;
+
+        content: '';
+        transform: translateY(-50%);
+    }
+
+
+    .compare_info .product .amount .btn:before
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: 48px;
+        height: 48px;
+
+        content: '';
+        transform: translate(-50%,-50%);
+    }
+
+
+    .compare_info .mobile .product .favorite_btn
+    {
+        position: relative;
+    }
+
+    .compare_info .mobile .product .favorite_btn:before
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: 48px;
+        height: 48px;
+
+        content: '';
+        transform: translate(-50%,-50%);
+    }
+
+
+    .compare_info .mobile .controls .swiper-button-next:before,
+    .compare_info .mobile .controls .swiper-button-prev:before
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        display: block;
+
+        width: 48px;
+        height: 48px;
+
+        content: '';
+        transform: translate(-50%,-50%);
     }
 
 

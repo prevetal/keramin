@@ -756,23 +756,6 @@
 
 
 
-    .compare_info .mobile .product .favorite_btn
-    {
-        margin-right: 4px;
-    }
-
-    .compare_info .mobile .product .buy_btn
-    {
-        width: calc(100% - 72px);
-    }
-
-    .compare_info .mobile .product .remove_btn
-    {
-        margin-left: 4px;
-    }
-
-
-
     .compare_info .mobile .product .features > *
     {
         padding-inline: 8px 4px;

@@ -660,7 +660,29 @@ document.addEventListener('DOMContentLoaded', function () {
 				slideActiveClass: 'active',
 				slideVisibleClass: 'visible',
 				spaceBetween: 0,
-				slidesPerView: 1
+				slidesPerView: 1,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'fraction',
+					renderFraction: function (currentClass, totalClass) {
+						return `<span class="${currentClass}"></span>&nbsp;из&nbsp;<span class="${totalClass}"></span>`
+					},
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				on: {
+					init: swiper => {
+						setTimeout(() => {
+							let items = swiper.el.querySelectorAll('.product')
+
+							items.forEach(el => el.style.height = 'auto')
+
+							setHeight(items)
+						})
+					},
+				}
 			}
 
 			compareMobileTopSliders.push(new Swiper('.compare_mobile_top_s' + i, options))
