@@ -742,6 +742,12 @@
     }
 
 
+    .compare_info .mobile .btns
+    {
+        padding-inline: 8px;
+    }
+
+
     .compare_info .mobile .product .info
     {
         margin-right: 4px;
@@ -755,7 +761,6 @@
     }
 
 
-
     .compare_info .mobile .product .features > *
     {
         padding-inline: 8px 4px;
@@ -764,6 +769,17 @@
     .compare_info .mobile .col:nth-child(2n) .product .features > *
     {
         padding-inline: 4px 8px;
+    }
+
+
+    .compare_info .mobile .controls
+    {
+        padding: 9px 12px 9px 16px;
+    }
+
+    .compare_info .mobile .col:nth-child(2) .controls
+    {
+        padding: 9px 14px 9px 12px;
     }
 
 

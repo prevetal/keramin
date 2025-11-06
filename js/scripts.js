@@ -654,7 +654,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			let options = {
 				loop: true,
-				loopedSlides: el.querySelectorAll('.swiper-slide').length,
 				speed: 500,
 				watchSlidesProgress: true,
 				slideActiveClass: 'active',
@@ -693,7 +692,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 			let options = {
 				loop: true,
-				loopedSlides: el.querySelectorAll('.swiper-slide').length,
 				speed: 500,
 				watchSlidesProgress: true,
 				slideActiveClass: 'active',

@@ -9287,12 +9287,20 @@ aside
     align-items: stretch;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    width: 100%;
 }
 
 
 .compare_info .mobile .col
 {
     width: 50%;
+}
+
+
+.compare_info .mobile .col .swiper
+{
+    width: 100%;
 }
 
 
@@ -9309,7 +9317,13 @@ aside
     justify-content: space-between;
 
     width: 100%;
-    padding: 9px 15px;
+    padding: 9px 23px 9px 35px;
+}
+
+
+.compare_info .mobile .col:nth-child(2) .controls
+{
+    padding: 9px 35px 9px 23px;
 }
 
 
@@ -9456,8 +9470,18 @@ aside
 }
 
 
+.compare_info .mobile .btns
+{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-inline: 24px;
+}
+
+
 .compare_info .btns .btn
 {
+    position: relative;
+
     width: 100%;
     height: 46px;
 
@@ -9468,6 +9492,22 @@ aside
 
     border: 1px solid #d8d8d8;
     background: var(--bg);
+}
+
+
+.compare_info .btns .btn:before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 48px;
+
+    content: '';
+    transform: translateY(-50%);
 }
 
 
