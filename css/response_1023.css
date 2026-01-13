@@ -286,6 +286,12 @@
     }
 
 
+    header .categories .sub:before
+    {
+        display: none;
+    }
+
+
     header .categories .sub .row > *
     {
         width: 100%;

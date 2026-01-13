@@ -87,6 +87,12 @@
     }
 
 
+    header .categories .sub:before
+    {
+        height: 72px;
+    }
+
+
     header .categories .sub .row
     {
         justify-content: space-between;

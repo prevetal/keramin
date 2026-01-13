@@ -1504,6 +1504,21 @@ header .categories > * > a.touch_link + .sub.show
 }
 
 
+header .categories .sub:before
+{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 80px;
+
+    content: '';
+}
+
+
 header .categories .sub .row
 {
     margin-bottom: -40px;
