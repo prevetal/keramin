@@ -1164,6 +1164,29 @@
 
 
 
+    /*------------------------
+        Catalog categories
+    ------------------------*/
+    .catalog_categories .tabs .btn
+    {
+        font-size: 14px;
+    }
+
+
+    .catalog_categories .row
+    {
+        margin-left: 0;
+    }
+
+
+    .catalog_categories .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

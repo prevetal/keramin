@@ -998,6 +998,26 @@
 
 
 
+    /*------------------------
+        Catalog categories
+    ------------------------*/
+    .catalog_categories .tabs
+    {
+        display: flex;
+
+        width: 100%;
+        margin-inline: 0;
+        padding: 0;
+    }
+
+
+    .catalog_categories .row > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
+
     /*------------
         Footer
     ------------*/
