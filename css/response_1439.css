@@ -1042,6 +1042,37 @@
 
 
 
+    /*------------------------
+        Catalog categories
+    ------------------------*/
+    .catalog_categories .tabs
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .catalog_categories .row
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+
+    .catalog_categories .row > *
+    {
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
+    .catalog_categories .category .name
+    {
+        font-size: 18px;
+    }
+
+
+
     /*-----------
         PopUp
     -----------*/

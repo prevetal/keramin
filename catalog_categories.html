@@ -51,7 +51,7 @@
 								<div class="links">
 									<div><a href="/">О компании</a></div>
 									<div><a href="/">Партнерам</a></div>
-									<div><a href="/">Где купить</a></div>
+									<div><a class="active">Где купить</a></div>
 									<div><a href="/">Контакты</a></div>
 								</div>
 
@@ -128,7 +128,7 @@
 									</div>
 
 									<div class="cart">
-										<a class="active">
+										<a href="/">
 											<span class="count">2</span>
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_cart"></use></svg>
 										</a>
@@ -141,7 +141,7 @@
 							<div class="cont">
 								<nav class="categories row">
 									<div>
-										<a href="/" class="sub_link">
+										<a href="/" class="sub_link active">
 											<svg class="icon"><use xlink:href="images/sprite.svg#ic_catalog"></use></svg>
 											<span>КАТАЛОГ</span>
 										</a>
@@ -296,507 +296,98 @@
 					<div class="cont">
 						<div class="breadcrumbs">
 							<a href="/">Главная</a> <span class="sep"></span>
-							<span class="current">Корзина</span>
+							<span class="current">Каталог</span>
 						</div>
 
-						<h1 class="page_title">Корзина</h1>
+						<h1 class="page_title">Каталог товаров</h1>
 					</div>
 				</section>
 
 
-				<section class="cart_info content_flex block">
-					<div class="cont row">
-						<section class="content">
-							<div class="list">
-								<div class="product">
-									<div class="thumb">
-										<a href="/" target="_blank">
-											<img data-src="images/tmp/product_info_img.jpg" alt="" class="lazyload">
-										</a>
-									</div>
-
-									<div class="info">
-										<div class="name">
-											<a href="/" target="_blank">Керамическая плитка Керамин Сонора 3Д 750х250</a>
-										</div>
-
-										<div class="articul">Артикул: <span>CDB00028579</span></div>
-									</div>
-
-									<div class="price">
-										<div class="val">1 069 <span class="currency">г</span> / м2</div>
-
-										<div class="unit">
-											<label>
-												<input type="radio" name="product1_unit" checked>
-												<div>м2</div>
-											</label>
-
-											<label>
-												<input type="radio" name="product1_unit">
-												<div>шт.</div>
-											</label>
-
-											<label>
-												<input type="radio" name="product1_unit">
-												<div>упак.</div>
-											</label>
-
-											<div class="exp">1,44 м = 4 шт = 1 упак</div>
-										</div>
-									</div>
-
-									<div class="amount">
-										<button type="button" class="btn minus">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										</button>
-
-										<input type="text" value="50" class="input"
-										  data-minimum="1" data-maximum="99" data-step="1" data-unit="" maxlength="2">
-
-										<button type="button" class="btn plus">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										</button>
-									</div>
-
-									<div class="price total">
-										<div class="val">53 450 <span class="currency">г</span></div>
-
-										<div class="exp">(8 шт, 2 упаковки)</div>
-									</div>
-
-									<button class="delete_btn">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_remove"></use></svg>
-									</button>
-								</div>
-
-
-								<div class="product">
-									<div class="thumb">
-										<a href="/" target="_blank">
-											<img data-src="images/tmp/product_info_img.jpg" alt="" class="lazyload">
-										</a>
-									</div>
-
-									<div class="info">
-										<div class="name">
-											<a href="/" target="_blank">Керамическая плитка Керамин Сонора 3Д 750х250</a>
-										</div>
-
-										<div class="articul">Артикул: <span>CDB00028579</span></div>
-									</div>
-
-									<div class="price">
-										<div class="val">1 069 <span class="currency">г</span> / м2</div>
-
-										<div class="unit">
-											<label>
-												<input type="radio" name="product2_unit" checked>
-												<div>м2</div>
-											</label>
-
-											<label>
-												<input type="radio" name="product2_unit">
-												<div>шт.</div>
-											</label>
-
-											<label>
-												<input type="radio" name="product2_unit">
-												<div>упак.</div>
-											</label>
-
-											<div class="exp">1,44 м = 4 шт = 1 упак</div>
-										</div>
-									</div>
-
-									<div class="amount">
-										<button type="button" class="btn minus">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										</button>
-
-										<input type="text" value="50" class="input"
-										  data-minimum="1" data-maximum="99" data-step="1" data-unit="" maxlength="2">
-
-										<button type="button" class="btn plus">
-											<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
-										</button>
-									</div>
-
-									<div class="price total">
-										<div class="val">53 450 <span class="currency">г</span></div>
-
-										<div class="exp">(8 шт, 2 упаковки)</div>
-									</div>
-
-									<button class="delete_btn">
-										<svg class="icon"><use xlink:href="images/sprite.svg#ic_remove"></use></svg>
-									</button>
-								</div>
-							</div>
-
-							<button class="clear_btn">
-								<svg class="icon"><use xlink:href="images/sprite.svg#ic_reset"></use></svg>
-								<span>ОЧИСТИТЬ КОРЗИНУ</span>
+				<section class="catalog_categories block tabs_container">
+					<div class="cont">
+						<div class="tabs">
+							<button data-content="#tab1" data-level="level1" class="btn active">
+								<span class="indicator"></span>
+								<span>Коллекции</span>
 							</button>
 
+							<button data-content="#tab2" data-level="level1" class="btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_sale"></use></svg>
+								<span>Распродажа</span>
+							</button>
+						</div>
 
-							<section class="checkout_info" id="checkout">
-								<div class="block_head small">
-									<div class="title">Оформление заказа</div>
-								</div>
-
-								<form action="" class="form">
-									<div class="section">
-										<div class="title">Данные покупателя</div>
-
-										<div class="columns row">
-											<div class="line width1of3">
-												<div class="label">ФАМИЛИЯ</div>
-
-												<div class="field">
-													<input type="text" name="" value="" class="input">
-												</div>
-											</div>
-
-											<div class="line width1of3">
-												<div class="label">ИМЯ <spam class="required">*</spam></div>
-
-												<div class="field">
-													<input type="text" name="" value="" class="input">
-												</div>
-											</div>
-
-											<div class="line width1of3">
-												<div class="label">ОТЧЕСТВО</div>
-
-												<div class="field">
-													<input type="text" name="" value="" class="input">
-												</div>
-											</div>
-
-											<div class="line width1of3">
-												<div class="label">E-MAIL <spam class="required">*</spam></div>
-
-												<div class="field">
-													<input type="email" name="" value="" class="input">
-												</div>
-											</div>
-
-											<div class="line width1of6">
-												<div class="label">ТЕЛЕФОН <spam class="required">*</spam></div>
-
-												<div class="field">
-													<input type="tel" name="" value="" class="input" placeholder="+7">
-												</div>
-											</div>
-
-											<div class="line width2of3">
-												<div class="label">КОММЕНТАРИЙ</div>
-
-												<div class="field">
-													<textarea name=""></textarea>
-												</div>
-											</div>
-										</div>
-
-										<div class="entity_check">
-											<label class="checkbox">
-												<input type="checkbox" name="agree">
-
-												<div class="check">
-													<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
-												</div>
-
-												<div>Оформить заказ как юридическое лицо</div>
-											</label>
-
-											<button class="login_btn">Вход для юрлиц</button>
-										</div>
-
-										<div class="entity_info">
-											<div class="columns row">
-												<div class="line width1of3">
-													<div class="label">НАЗВАНИЕ ОРГАНИЗАЦИИ</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">ЮРИДИЧЕСКИЙ АДРЕС</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of6">
-													<div class="label">ИНН</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of6">
-													<div class="label">КПП</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">НАИМЕНОВАНИЕ БАНКА</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">БИК</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">КОРРЕСПОНДЕНТСИКЙ СЧЕТ</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">РАСЧЕТНЫЙ СЧЕТ</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line file width1of3">
-													<div class="field">
-														<input type="file" name="file" id="file">
-
-														<label for="file">
-															<svg class="icon"><use xlink:href="images/sprite.svg#ic_file2"></use></svg>
-															<span>ПРИКРЕПИТЬ ФАЙЛ С РЕКВИЗИТАМИ</span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</div>
+						<div class="tab_content level1 active" id="tab1">
+							<div class="row">
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb1.jpg" alt="" class="lazyload">
 									</div>
 
+									<div class="name">Керамическая плитка</div>
+								</a>
 
-									<div class="section">
-										<div class="title">Способ оплаты</div>
-
-										<div class="line payment_methods">
-											<div class="field">
-												<label class="radio">
-													<input type="radio" name="payment_method" checked>
-													<div class="check"></div>
-													<div>Онлайн оплата на сайте</div>
-												</label>
-											</div>
-
-											<div class="field">
-												<label class="radio">
-													<input type="radio" name="payment_method">
-													<div class="check"></div>
-													<div>Оплата при получении</div>
-												</label>
-											</div>
-
-											<div class="field">
-												<label class="radio">
-													<input type="radio" name="payment_method">
-													<div class="check"></div>
-													<div>Счет на безнал</div>
-												</label>
-											</div>
-										</div>
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb2.jpg" alt="" class="lazyload">
 									</div>
 
+									<div class="name">Керамогранит</div>
+								</a>
 
-									<div class="section">
-										<div class="title">Способ доставки</div>
-
-										<div class="line delivery_methods">
-											<div class="field">
-												<label class="radio" data-info=".delivery_info1">
-													<input type="radio" name="delivery_method" checked>
-													<div class="check"></div>
-
-													<div>
-														<div class="name">Самовывоз</div>
-
-														<div class="exp">Московская область, Домодедовский округ, деревня Шахово, дом 60, строение 1</div>
-													</div>
-												</label>
-											</div>
-
-											<div class="field">
-												<label class="radio">
-													<input type="radio" name="delivery_method">
-													<div class="check"></div>
-
-													<div>
-														<div class="name">Курьерская служба компании</div>
-
-														<div class="exp">Доставка не входит в итоговую стоимость заказа и оплачивается отдельно после согласования с оператором.</div>
-													</div>
-												</label>
-											</div>
-
-											<div class="field">
-												<label class="radio">
-													<input type="radio" name="delivery_method">
-													<div class="check"></div>
-
-													<div>
-														<div class="name">Транспортная компания </div>
-													</div>
-												</label>
-											</div>
-										</div>
-
-										<div class="delivery_info delivery_info1" style="display: block;">
-											<div class="columns row">
-												<div class="line width1of3">
-													<div class="label">ГОРОД</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of3">
-													<div class="label">УЛИЦА</div>
-
-													<div class="field">
-														<input type="text" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of6">
-													<div class="label">ДОМ</div>
-
-													<div class="field">
-														<input type="number" name="" value="" class="input">
-													</div>
-												</div>
-
-												<div class="line width1of6">
-													<div class="label">КВАРТИРА/ОФИС</div>
-
-													<div class="field">
-														<input type="number" name="" value="" class="input">
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="line agree">
-											<div class="field">
-												<label class="checkbox">
-													<input type="checkbox" name="agree" checked>
-
-													<div class="check">
-														<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
-													</div>
-
-													<div>Соглашаюсь на обработку моих персональных данных и принимаю <a href="/" target="_blank">политику конфиденциальности</a>.</div>
-												</label>
-											</div>
-										</div>
-
-										<div class="line submit">
-											<button type="submit" class="submit_btn">КУПИТЬ</button>
-										</div>
-									</div>
-								</form>
-							</section>
-						</section>
-
-
-						<aside>
-							<div class="cart_total sticky">
-								<div class="price">
-									<div class="label">Сумма заказа</div>
-
-									<div class="val">70 378 <span class="currency">г</span></div>
-								</div>
-
-								<div class="delivery_payment">
-									<div class="delivery">
-										<div>Доставка</div>
-										<div class="val">Самовывоз</div>
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb3.jpg" alt="" class="lazyload">
 									</div>
 
-									<div class="sep"></div>
+									<div class="name">Клинкерная плитка</div>
+								</a>
 
-									<div class="payment">
-										<div>Оплата</div>
-										<div class="val">На сайте</div>
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb4.jpg" alt="" class="lazyload">
 									</div>
-								</div>
 
-								<div class="features">
-									<div>Товаров: <span>2</span></div>
-									<div>Общий вес: <span>53.936 кг</span></div>
-								</div>
+									<div class="name">Раковины</div>
+								</a>
 
-								<div class="form">
-									<button class="checkout_btn scroll_btn" data-anchor="checkout">ОФОРМИТЬ ЗАКАЗ</button>
-
-									<div class="agree">
-										<div class="field">
-											<label class="checkbox">
-												<input type="checkbox" name="agree" checked>
-
-												<div class="check">
-													<svg><use xlink:href="images/sprite.svg#ic_check"></use></svg>
-												</div>
-
-												<div>Соглашаюсь на обработку моих персональных данных и принимаю <a href="/" target="_blank">политику конфиденциальности</a>.</div>
-											</label>
-										</div>
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb5.jpg" alt="" class="lazyload">
 									</div>
-								</div>
+
+									<div class="name">Унитазы</div>
+								</a>
+
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb6.jpg" alt="" class="lazyload">
+									</div>
+
+									<div class="name">Биде</div>
+								</a>
+
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb7.jpg" alt="" class="lazyload">
+									</div>
+
+									<div class="name">Писсуары</div>
+								</a>
+
+								<a href="/" class="category">
+									<div class="thumb">
+										<img data-src="images/tmp/catalog_category_thumb8.jpg" alt="" class="lazyload">
+									</div>
+
+									<div class="name">Инсталляции</div>
+								</a>
 							</div>
-						</aside>
-					</div>
-				</section>
+						</div>
 
+						<div class="tab_content level1" id="tab2">
 
-				<section class="bottom_btns block small_m">
-					<button class="btn callback_btn modal_btn" data-modal="callback_modal">
-						<svg class="icon"><use xlink:href="images/sprite.svg#ic_phone"></use></svg>
-						<span>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</span>
-					</button>
-
-					<button class="btn consult_btn modal_btn" data-modal="consult_modal">
-						<svg class="icon"><use xlink:href="images/sprite.svg#ic_consult"></use></svg>
-						<span>ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</span>
-					</button>
-				</section>
-
-
-				<section class="bottom_text block small_m">
-					<div class="cont">
-						<div class="text_block">
-							<h2>Преимущества керамической плитки Керамин</h2>
-
-							<p>В салоне-магазине ООО «ТК «Керамин–Центр» покупателей ждут готовые идеи и практичные решения для оформления интерьера, а также полный спектр фирменных услуг: от рекомендации опытного консультанта, который поможет сделать правильный выбор, до бесплатной профессиональной разработки 3D дизайн-проекта помещения и расчета необходимого количества продукции.</p>
-
-							<p>Наша цель — дать возможность клиентам комфортно, удобно и легко совершать покупку, воплощая в жизнь свои задумки и дизайнерские решения. Сегодня «Керамин» — это актуальные и современные коллекции керамической плитки и керамического гранита, изысканная санитарная керамика, созданные в результате постоянного поиска новых идей и возможностей совершенствования производства.</p>
 						</div>
 					</div>
 				</section>

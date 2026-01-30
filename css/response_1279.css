@@ -940,6 +940,26 @@
 
 
 
+    /*------------------------
+        Catalog categories
+    ------------------------*/
+    .catalog_categories .row > *
+    {
+        width: calc(33.333% - 20px);
+    }
+
+
+
+    /*---------------
+        Cart info
+    ---------------*/
+    .cart_info .product .price .exp
+    {
+        font-size: 12px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
