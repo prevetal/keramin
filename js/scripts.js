@@ -960,6 +960,43 @@ document.addEventListener('DOMContentLoaded', function () {
 	}
 
 
+	// Menu
+	const categoriesItems = document.querySelectorAll('.categories .has-submenu')
+
+	categoriesItems.forEach(item => {
+		let openTimeout = null,
+			closeTimeout = null
+
+		const openSubmenu = () => {
+			clearTimeout(closeTimeout)
+
+			item.classList.add('hover')
+		}
+
+		const scheduleOpen = () => {
+			clearTimeout(openTimeout)
+
+			openTimeout = setTimeout(openSubmenu, 250)
+		}
+
+		const scheduleClose = () => {
+			clearTimeout(openTimeout)
+
+			closeTimeout = setTimeout(() => item.classList.remove('hover'), 250)
+		}
+
+		item.addEventListener('mouseenter', scheduleOpen)
+		item.addEventListener('mouseleave', scheduleClose)
+
+		const submenu = item.querySelector('.sub')
+
+		if (submenu) {
+			submenu.addEventListener('mouseenter', openSubmenu)
+			submenu.addEventListener('mouseleave', scheduleClose)
+		}
+	})
+
+
 	if (is_touch_device()) {
 		const subMenus = document.querySelectorAll('header .categories .sub')
 
